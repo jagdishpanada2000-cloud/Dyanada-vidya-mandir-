@@ -339,6 +339,7 @@ const translations: Translations = {
   "contact.form.subject": { en: "Subject", mr: "विषय" },
   "contact.form.message": { en: "Message", mr: "संदेश" },
   "contact.form.submit": { en: "Send message", mr: "संदेश पाठवा" },
+  "contact.viewMap": { en: "Open in Google Maps", mr: "गूगल नकाशात उघडा" },
 };
 
 interface LanguageContextType {

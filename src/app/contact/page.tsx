@@ -96,17 +96,24 @@ export default function Contact() {
 
       <Section alt>
         <Reveal>
-          <div className="overflow-hidden rounded-2xl shadow-soft bg-beige/50">
+          <div className="overflow-hidden rounded-2xl shadow-soft">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d350.978635985617!2d73.158075011365!3d19.2070707681616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7945e2dc2d085%3A0x53676eff1b9fbcfb!2sDnyanada%20Vidya%20Mandir!5e1!3m2!1sen!2sin!4v1"
+              src="https://maps.google.com/maps?q=19.2069162,73.1580918&z=17&output=embed"
               width="100%"
               height="450"
-              style={{ border: 0 }}
+              style={{ border: 0, display: "block" }}
               allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
               title="Dnyanada Vidya Mandir Location"
             />
+            <a
+              href="https://www.google.com/maps/place/Dnyanada+Vidya+Mandir/@19.2069162,73.1580918,17z"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 bg-primary px-4 py-3 text-center text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+            >
+              <MapPin className="h-4 w-4" strokeWidth={1.5} />
+              {t("contact.viewMap")}
+            </a>
           </div>
         </Reveal>
       </Section>
