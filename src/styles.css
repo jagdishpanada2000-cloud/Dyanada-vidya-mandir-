@@ -1,0 +1,183 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * IES Katrap Vidyalaya design system.
+ * Heritage warm-cream palette, maroon primary, warm gold accent.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 6px);
+  --radius-md: calc(var(--radius) - 4px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-surface: var(--surface);
+  --color-beige: var(--beige);
+  --color-navbar: var(--navbar);
+  --color-gold: var(--gold);
+  --color-gold-foreground: var(--gold-foreground);
+  --color-maroon: var(--primary);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Karla", ui-sans-serif, system-ui, sans-serif;
+  --font-devanagari: "Noto Sans Devanagari", ui-sans-serif, system-ui, sans-serif;
+
+  --shadow-soft: 0 1px 2px oklch(0.35 0.06 40 / 0.04), 0 8px 24px oklch(0.35 0.06 40 / 0.06);
+  --shadow-lift: 0 2px 4px oklch(0.35 0.06 40 / 0.05), 0 18px 44px oklch(0.35 0.06 40 / 0.12);
+}
+
+:root {
+  --radius: 0.875rem;
+
+  /* #F7E8D8 */
+  --background: oklch(0.929 0.031 71.5);
+  /* #2F2A26 */
+  --foreground: oklch(0.259 0.008 60);
+  /* #FFFDF9 */
+  --surface: oklch(0.994 0.005 95);
+  --card: oklch(0.994 0.005 95);
+  --card-foreground: oklch(0.259 0.008 60);
+  --popover: oklch(0.994 0.005 95);
+  --popover-foreground: oklch(0.259 0.008 60);
+  /* #F2E2D0 */
+  --beige: oklch(0.912 0.031 71);
+  /* #F4E2D1 */
+  --navbar: oklch(0.917 0.033 68);
+  /* #8A2E2A */
+  --primary: oklch(0.406 0.117 25.5);
+  --primary-foreground: oklch(0.98 0.012 85);
+  /* #C99A3A */
+  --gold: oklch(0.712 0.117 82);
+  --gold-foreground: oklch(0.259 0.008 60);
+  --secondary: oklch(0.912 0.031 71);
+  --secondary-foreground: oklch(0.406 0.117 25.5);
+  --muted: oklch(0.912 0.031 71);
+  /* #756C64 */
+  --muted-foreground: oklch(0.512 0.011 62);
+  --accent: oklch(0.712 0.117 82);
+  --accent-foreground: oklch(0.259 0.008 60);
+  --destructive: oklch(0.505 0.16 27);
+  --destructive-foreground: oklch(0.98 0.012 85);
+  /* #DFC7AE */
+  --border: oklch(0.842 0.038 72);
+  --input: oklch(0.842 0.038 72);
+  --ring: oklch(0.712 0.117 82);
+  --chart-1: oklch(0.406 0.117 25.5);
+  --chart-2: oklch(0.712 0.117 82);
+  --chart-3: oklch(0.512 0.011 62);
+  --chart-4: oklch(0.842 0.038 72);
+  --chart-5: oklch(0.912 0.031 71);
+  --sidebar: oklch(0.917 0.033 68);
+  --sidebar-foreground: oklch(0.259 0.008 60);
+  --sidebar-primary: oklch(0.406 0.117 25.5);
+  --sidebar-primary-foreground: oklch(0.98 0.012 85);
+  --sidebar-accent: oklch(0.912 0.031 71);
+  --sidebar-accent-foreground: oklch(0.406 0.117 25.5);
+  --sidebar-border: oklch(0.842 0.038 72);
+  --sidebar-ring: oklch(0.712 0.117 82);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    color: var(--primary);
+    letter-spacing: -0.01em;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--gold) 45%, transparent);
+  }
+
+  :lang(mr) body,
+  :lang(mr) p,
+  :lang(mr) li,
+  :lang(mr) span,
+  :lang(mr) div:not([class*="font-display"]) {
+    font-family: var(--font-devanagari);
+    line-height: 1.7;
+  }
+}
+
+@utility eyebrow {
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--gold);
+}
+
+@utility rule-gold {
+  height: 1px;
+  width: 3.5rem;
+  background: linear-gradient(90deg, var(--gold), transparent);
+}
+
+@utility card-elegant {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-soft);
+  transition:
+    box-shadow 0.4s ease,
+    transform 0.4s ease,
+    border-color 0.4s ease;
+
+  &:hover {
+    box-shadow: var(--shadow-lift);
+    transform: translateY(-3px);
+    border-color: color-mix(in oklab, var(--gold) 55%, var(--border));
+  }
+}
