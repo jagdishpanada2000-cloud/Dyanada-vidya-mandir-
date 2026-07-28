@@ -98,7 +98,7 @@ export default function Contact() {
         <Reveal>
           <div className="overflow-hidden rounded-2xl shadow-soft">
             <iframe
-              src="https://maps.google.com/maps?q=19.2069162,73.1580918&z=16&output=embed&hl=en"
+              src="https://maps.google.com/maps?q=19.2070682,73.1581615&z=18&output=embed&hl=en"
               width="100%"
               height="450"
               style={{ border: 0 }}
