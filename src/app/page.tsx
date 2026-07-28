@@ -7,24 +7,6 @@ import { useLanguage } from "@/lib/language";
 import { Reveal, Section } from "@/components/Section";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Gyanada Vidya Mandir | ज्ञानदा विद्या मंदिर, उल्हासनगर-४" },
-      {
-        name: "description",
-        content: "Dyanada Vidya Mandir, Ulhasnagar-4 — knowledge, values and quality education since 1975.",
-      },
-      { property: "og:title", content: "Gyanada Vidya Mandir | ज्ञानदा विद्या मंदिर, उल्हासनगर-४" },
-      {
-        property: "og:description",
-        content: "A 50-year legacy of learning in Ulhasnagar-4. Explore academics, facilities, admissions and the Gyanada community.",
-      },
-    ],
-  }),
-  component: Home,
-});
-
 const coreValues = [
   "ज्ञान", "संस्कार", "शिस्त", "प्रामाणिकपणा", "आदर",
   "सहकार्य", "सर्जनशीलता", "करुणा", "सामाजिक बांधिलकी", "देशप्रेम",
