@@ -4,7 +4,7 @@ import { BookOpen, Heart, Scale, Shield, Handshake, Users, Lightbulb, HeartHands
 import { motion } from "framer-motion";
 import { useLanguage } from "@/lib/language";
 import { PageHero, Reveal, Section, SectionHeading } from "@/components/Section";
-import { ImagePlaceholder } from "@/components/ImagePlaceholder";
+
 
 const coreValueData = [
   { mr: "ज्ञान", en: "Knowledge", icon: BookOpen },
@@ -80,7 +80,11 @@ export default function About() {
             {t("about.logo.motto")}
           </p>
           <div className="mt-8">
-            <ImagePlaceholder label="School Logo" ratio="1/1" className="mx-auto h-40 w-40 rounded-full" />
+            <img
+              src="/images/logo.png"
+              alt="Dnyanada Vidya Mandir Logo"
+              className="mx-auto h-40 w-40 rounded-full object-cover shadow-soft"
+            />
           </div>
         </Reveal>
       </Section>
