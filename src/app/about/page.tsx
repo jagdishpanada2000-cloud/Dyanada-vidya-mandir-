@@ -1,22 +1,27 @@
 "use client";
 
+import { BookOpen, Heart, Scale, Shield, Handshake, Users, Lightbulb, HeartHandshake, Globe, Flag } from "lucide-react";
+import { motion } from "framer-motion";
 import { useLanguage } from "@/lib/language";
 import { PageHero, Reveal, Section, SectionHeading } from "@/components/Section";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 
-const coreValues = [
-  "ज्ञान", "संस्कार", "शिस्त", "प्रामाणिकपणा", "आदर",
-  "सहकार्य", "सर्जनशीलता", "करुणा", "सामाजिक बांधिलकी", "देशप्रेम",
-];
-
-const coreValuesEn = [
-  "Knowledge (ज्ञान)", "Values (संस्कार)", "Discipline (शिस्त)", "Honesty (प्रामाणिकपणा)", "Respect (आदर)",
-  "Cooperation (सहकार्य)", "Creativity (सर्जनशीलता)", "Compassion (करुणा)", "Social Commitment (सामाजिक बांधिलकी)", "Patriotism (देशप्रेम)",
+const coreValueData = [
+  { mr: "ज्ञान", en: "Knowledge", icon: BookOpen },
+  { mr: "संस्कार", en: "Values", icon: Heart },
+  { mr: "शिस्त", en: "Discipline", icon: Scale },
+  { mr: "प्रामाणिकपणा", en: "Honesty", icon: Shield },
+  { mr: "आदर", en: "Respect", icon: Handshake },
+  { mr: "सहकार्य", en: "Cooperation", icon: Users },
+  { mr: "सर्जनशीलता", en: "Creativity", icon: Lightbulb },
+  { mr: "करुणा", en: "Compassion", icon: HeartHandshake },
+  { mr: "सामाजिक बांधिलकी", en: "Social Commitment", icon: Globe },
+  { mr: "देशप्रेम", en: "Patriotism", icon: Flag },
 ];
 
 export default function About() {
   const { t, language } = useLanguage();
-  const values = language === "en" ? coreValuesEn : coreValues;
+  const values = coreValueData;
 
   return (
     <>
@@ -86,16 +91,29 @@ export default function About() {
           title=""
           center
         />
-        <Reveal delay={0.08} className="mt-8">
-          <div className="flex flex-wrap justify-center gap-x-6 gap-y-3">
-            {values.map((v, i) => (
-              <span
-                key={i}
-                className="rounded-full border border-gold/40 bg-surface px-5 py-2 font-display text-sm font-medium text-primary shadow-soft"
-              >
-                {v}
-              </span>
-            ))}
+        <Reveal delay={0.08} className="mt-10">
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5">
+            {values.map((v, i) => {
+              const Icon = v.icon;
+              return (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 12 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.04, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+                  whileHover={{ y: -4 }}
+                  className="group flex flex-col items-center rounded-2xl border border-gold/20 bg-surface p-5 text-center shadow-soft transition-all duration-300 hover:border-gold/60 hover:shadow-lift"
+                >
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gold/10 text-gold transition-colors duration-300 group-hover:bg-gold group-hover:text-white">
+                    <Icon className="h-5 w-5" strokeWidth={1.5} />
+                  </div>
+                  <span className="mt-3 font-display text-sm font-semibold leading-tight text-primary">
+                    {language === "en" ? v.en : v.mr}
+                  </span>
+                </motion.div>
+              );
+            })}
           </div>
         </Reveal>
       </Section>
