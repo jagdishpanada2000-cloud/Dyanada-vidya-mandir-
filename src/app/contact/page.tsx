@@ -3,7 +3,6 @@
 import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import { useLanguage } from "@/lib/language";
 import { PageHero, Reveal, Section } from "@/components/Section";
-import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 
 export default function Contact() {
   const { t } = useLanguage();
@@ -97,7 +96,18 @@ export default function Contact() {
 
       <Section alt>
         <Reveal>
-          <ImagePlaceholder label={t("contact.map")} ratio="21/9" />
+          <div className="overflow-hidden rounded-2xl shadow-soft">
+            <iframe
+              src="https://maps.google.com/maps?q=19.2069162,73.1580918&z=16&output=embed&hl=en"
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Dnyanada Vidya Mandir Location"
+            />
+          </div>
         </Reveal>
       </Section>
     </>
