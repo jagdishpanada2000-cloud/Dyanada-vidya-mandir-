@@ -18,6 +18,7 @@ const translations: Translations = {
   "nav.contact": { en: "Contact", mr: "संपर्क" },
   "nav.admissions": { en: "Admissions", mr: "प्रवेश" },
   "nav.menu": { en: "Menu", mr: "मेनू" },
+  "nav.schoolName": { en: "Dnyanada Vidya Mandir", mr: "ज्ञानदा विद्या मंदिर" },
 
   /* Footer */
   "footer.tagline": { en: "Est. 1975 · Ulhasnagar-4", mr: "स्था. १९७५ · उल्हासनगर-४" },

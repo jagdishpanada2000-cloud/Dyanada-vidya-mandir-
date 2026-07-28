@@ -73,17 +73,17 @@ export function Navbar() {
         )}
       >
         <Link href="/" className="flex min-w-0 items-center gap-3">
-          <span
+          <img
+            src="/images/logo.png"
+            alt={t("nav.schoolName")}
             className={cn(
-              "grid shrink-0 place-items-center rounded-full bg-primary font-display text-primary-foreground transition-all duration-500",
-              scrolled ? "h-9 w-9 text-sm" : "h-11 w-11 text-base",
+              "shrink-0 rounded-full object-cover transition-all duration-500",
+              scrolled ? "h-9 w-9" : "h-11 w-11",
             )}
-          >
-            ज्ञा
-          </span>
+          />
           <span className="min-w-0">
             <span className="block truncate font-display text-lg leading-tight font-semibold text-primary sm:text-xl">
-              ज्ञानदा विद्या मंदिर
+              {t("nav.schoolName")}
             </span>
             <span className="hidden text-[0.65rem] tracking-[0.2em] uppercase text-muted-foreground sm:block">
               {t("footer.tagline")}
