@@ -61,7 +61,7 @@ export function Footer() {
             </li>
             <li className="flex gap-3">
               <Mail className="mt-0.5 h-4 w-4 shrink-0 text-gold" strokeWidth={1.6} />
-              info@gyanadavm.edu.in
+              info@dnyanadavm.edu.in
             </li>
           </ul>
         </div>

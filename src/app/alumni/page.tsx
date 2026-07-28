@@ -1,14 +1,18 @@
 "use client";
 
 import { Quote } from "lucide-react";
+import Image from "next/image";
 import { useLanguage } from "@/lib/language";
 import { PageHero, Reveal, Section, SectionHeading } from "@/components/Section";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 
 const voiceKeys = [
-  { nameKey: "alumni.v1.name", batchKey: "alumni.v1.batch", roleKey: "alumni.v1.role", quoteKey: "alumni.v1.quote" },
-  { nameKey: "alumni.v2.name", batchKey: "alumni.v2.batch", roleKey: "alumni.v2.role", quoteKey: "alumni.v2.quote" },
-  { nameKey: "alumni.v3.name", batchKey: "alumni.v3.batch", roleKey: "alumni.v3.role", quoteKey: "alumni.v3.quote" },
+  { nameKey: "alumni.v1.name", batchKey: "alumni.v1.batch", roleKey: "alumni.v1.role", quoteKey: "alumni.v1.quote", img: "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785253869/Rahul_Sonawane_rvtisp.jpg" },
+  { nameKey: "alumni.v2.name", batchKey: "alumni.v2.batch", roleKey: "alumni.v2.role", quoteKey: "alumni.v2.quote", img: "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785253868/Mangesh_Gopale_m1vuod.jpg" },
+  { nameKey: "alumni.v3.name", batchKey: "alumni.v3.batch", roleKey: "alumni.v3.role", quoteKey: "alumni.v3.quote", img: "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785253873/Roshan_Kalake_yg5zkk.jpg" },
+  { nameKey: "alumni.v4.name", batchKey: "alumni.v4.batch", roleKey: "alumni.v4.role", quoteKey: "alumni.v4.quote", img: "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785253868/Jyotsna_Suralkar_cx6zeb.jpg" },
+  { nameKey: "alumni.v5.name", batchKey: "alumni.v5.batch", roleKey: "alumni.v5.role", quoteKey: "alumni.v5.quote", img: "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785253871/Rakesh_Shinde_mwpbit.jpg" },
+  { nameKey: "alumni.v6.name", batchKey: "alumni.v6.batch", roleKey: "alumni.v6.role", quoteKey: "alumni.v6.quote", img: "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785253870/Sopan_Avhad_wtacjv.jpg" },
 ];
 
 export default function Alumni() {
@@ -32,7 +36,7 @@ export default function Alumni() {
                   &ldquo;{t(v.quoteKey)}&rdquo;
                 </p>
                 <div className="mt-7 flex items-center gap-4 border-t border-border pt-6">
-                  <ImagePlaceholder ratio="1/1" className="h-14 w-14 shrink-0 rounded-full" />
+                  <Image src={v.img} alt={t(v.nameKey)} width={56} height={56} className="h-14 w-14 shrink-0 rounded-full object-cover" />
                   <div className="min-w-0">
                     <p className="truncate font-medium text-primary">{t(v.nameKey)}</p>
                     <p className="truncate text-xs text-muted-foreground">
