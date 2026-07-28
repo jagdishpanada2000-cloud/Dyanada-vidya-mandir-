@@ -6,6 +6,7 @@ import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/lib/language";
 import { Reveal, Section } from "@/components/Section";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
+import { toMarathiNum } from "@/lib/utils";
 
 const coreValues = [
   "ज्ञान", "संस्कार", "शिस्त", "प्रामाणिकपणा", "आदर",
@@ -80,7 +81,7 @@ export default function Home() {
           >
             <ImagePlaceholder label="Dnyanada Vidya Mandir Campus" ratio="4/5" className="shadow-lift" />
             <div className="absolute -bottom-6 -left-6 hidden w-56 rounded-2xl border border-border bg-surface/80 p-5 shadow-soft backdrop-blur-md sm:block">
-              <span className="font-display text-3xl font-semibold text-primary">50+</span>
+              <span className="font-display text-3xl font-semibold text-primary">{language === "mr" ? toMarathiNum("50+") : "50+"}</span>
               <p className="mt-1 text-xs tracking-[0.16em] uppercase text-muted-foreground">
                 {t("home.hero.badge")}
               </p>
@@ -94,7 +95,7 @@ export default function Home() {
           {stats.map((s, i) => (
             <Reveal key={s.label} delay={i * 0.07} className="text-center">
               <div className="font-display text-4xl font-semibold text-primary sm:text-5xl">
-                {s.value}
+                {language === "mr" ? toMarathiNum(s.value) : s.value}
               </div>
               <p className="mt-2 text-xs tracking-[0.2em] uppercase text-muted-foreground">
                 {s.label}
