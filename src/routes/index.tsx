@@ -11,7 +11,7 @@ export const Route = createFileRoute("/")({
       { title: "Gyanada Vidya Mandir | ज्ञानदा विद्या मंदिर, उल्हासनगर-४" },
       {
         name: "description",
-        content: "Gyanada Vidya Mandir, Ulhasnagar-4 — knowledge, values and quality education since 1975.",
+        content: "Dyanada Vidya Mandir, Ulhasnagar-4 — knowledge, values and quality education since 1975.",
       },
       { property: "og:title", content: "Gyanada Vidya Mandir | ज्ञानदा विद्या मंदिर, उल्हासनगर-४" },
       {
