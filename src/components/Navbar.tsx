@@ -76,7 +76,7 @@ export function Navbar() {
       >
         <Link href="/" className="flex shrink-0 items-center gap-3">
           <img
-            src="/images/logo.png"
+            src="https://res.cloudinary.com/dwta5v9wi/image/upload/v1785258631/LOGO_krcdwh.png"
             alt={t("nav.schoolName")}
             className={cn(
               "shrink-0 rounded-full object-cover transition-all duration-500",

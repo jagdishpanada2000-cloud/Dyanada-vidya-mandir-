@@ -81,7 +81,7 @@ export default function About() {
           </p>
           <div className="mt-8">
             <img
-              src="/images/logo.png"
+              src="https://res.cloudinary.com/dwta5v9wi/image/upload/v1785258631/LOGO_krcdwh.png"
               alt="Dnyanada Vidya Mandir Logo"
               className="mx-auto h-40 w-40 rounded-full object-cover shadow-soft"
             />
