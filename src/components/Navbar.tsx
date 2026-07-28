@@ -62,17 +62,19 @@ export function Navbar() {
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 w-full border-b bg-navbar/85 backdrop-blur-md transition-all duration-500",
-        scrolled ? "border-border shadow-soft" : "border-transparent",
+        "sticky top-0 z-50 w-full border-b bg-surface/80 backdrop-blur-md transition-all duration-500",
+        scrolled
+          ? "border-border/60 shadow-[0_1px_0_0_oklch(0.71_0.12_82/0.15),0_8px_24px_oklch(0.35_0.06_40/0.06)]"
+          : "border-transparent",
       )}
     >
       <div
         className={cn(
-          "mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 transition-all duration-500 lg:px-8",
+          "mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 transition-all duration-500 lg:px-8",
           scrolled ? "h-16" : "h-20",
         )}
       >
-        <Link href="/" className="flex min-w-0 items-center gap-3">
+        <Link href="/" className="flex shrink-0 items-center gap-3">
           <img
             src="/images/logo.png"
             alt={t("nav.schoolName")}
@@ -81,8 +83,8 @@ export function Navbar() {
               scrolled ? "h-10 w-10" : "h-14 w-14",
             )}
           />
-          <span className="min-w-0">
-            <span className="block truncate font-display text-lg leading-tight font-semibold text-primary sm:text-xl">
+          <span className="flex flex-col">
+            <span className="whitespace-nowrap font-display text-lg leading-tight font-semibold text-primary sm:text-xl">
               ज्ञानदा विद्या मंदिर
             </span>
             <span className="hidden text-[0.65rem] tracking-[0.2em] uppercase text-muted-foreground sm:block">
