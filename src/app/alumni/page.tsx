@@ -1,27 +1,9 @@
-import { createFileRoute } from "@tanstack/react-router";
+"use client";
+
 import { Quote } from "lucide-react";
 import { useLanguage } from "@/lib/language";
 import { PageHero, Reveal, Section, SectionHeading } from "@/components/Section";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
-
-export const Route = createFileRoute("/alumni")({
-  head: () => ({
-    meta: [
-      { title: "Alumni | Gyanada Vidya Mandir, Ulhasnagar-4" },
-      {
-        name: "description",
-        content:
-          "The Gyanada Vidya Mandir alumni network — notable graduates, reunions and ways to stay connected.",
-      },
-      { property: "og:title", content: "Alumni | Gyanada Vidya Mandir, Ulhasnagar-4" },
-      {
-        property: "og:description",
-        content: "Notable graduates, reunions and ways to stay connected with the school.",
-      },
-    ],
-  }),
-  component: Alumni,
-});
 
 const voiceKeys = [
   { nameKey: "alumni.v1.name", batchKey: "alumni.v1.batch", roleKey: "alumni.v1.role", quoteKey: "alumni.v1.quote" },
@@ -29,7 +11,7 @@ const voiceKeys = [
   { nameKey: "alumni.v3.name", batchKey: "alumni.v3.batch", roleKey: "alumni.v3.role", quoteKey: "alumni.v3.quote" },
 ];
 
-function Alumni() {
+export default function Alumni() {
   const { t } = useLanguage();
   return (
     <>

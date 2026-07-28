@@ -1,26 +1,8 @@
-import { createFileRoute } from "@tanstack/react-router";
+"use client";
+
 import { useLanguage } from "@/lib/language";
 import { PageHero, Reveal, Section, SectionHeading } from "@/components/Section";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
-
-export const Route = createFileRoute("/highlights")({
-  head: () => ({
-    meta: [
-      { title: "Highlights | Gyanada Vidya Mandir, Ulhasnagar-4" },
-      {
-        name: "description",
-        content:
-          "Achievements, events and news from the current academic year at Gyanada Vidya Mandir, Ulhasnagar-4.",
-      },
-      { property: "og:title", content: "Highlights | Gyanada Vidya Mandir, Ulhasnagar-4" },
-      {
-        property: "og:description",
-        content: "Achievements, events and news from the current academic year.",
-      },
-    ],
-  }),
-  component: Highlights,
-});
 
 const highlightData = [
   { tagKey: "highlights.h1.tag", titleKey: "highlights.h1.title", textKey: "highlights.h1.text", date: "January 2026" },
@@ -29,7 +11,7 @@ const highlightData = [
   { tagKey: "highlights.h4.tag", titleKey: "highlights.h4.title", textKey: "highlights.h4.text", date: "September 2025" },
 ];
 
-function Highlights() {
+export default function Highlights() {
   const { t } = useLanguage();
   return (
     <>

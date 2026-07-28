@@ -1,4 +1,6 @@
-import { Link } from "@tanstack/react-router";
+"use client";
+
+import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { navLinks } from "./nav-links";
 import { useLanguage } from "@/lib/language";
@@ -36,7 +38,7 @@ export function Footer() {
             {navLinks.map((link) => (
               <li key={link.to}>
                 <Link
-                  to={link.to}
+                  href={link.to}
                   className="text-sm text-primary-foreground/75 transition-colors hover:text-gold"
                 >
                   {t(navKey[link.to])}

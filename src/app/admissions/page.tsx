@@ -1,28 +1,11 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+"use client";
+
+import Link from "next/link";
 import { useLanguage } from "@/lib/language";
 import { PageHero, Reveal, Section, SectionHeading } from "@/components/Section";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 
-export const Route = createFileRoute("/admissions")({
-  head: () => ({
-    meta: [
-      { title: "Admissions 2026–27 | Gyanada Vidya Mandir, Ulhasnagar-4" },
-      {
-        name: "description",
-        content:
-          "Admission process, key dates, eligibility and required documents for Gyanada Vidya Mandir, Ulhasnagar-4.",
-      },
-      { property: "og:title", content: "Admissions 2026–27 | Gyanada Vidya Mandir, Ulhasnagar-4" },
-      {
-        property: "og:description",
-        content: "Admission process, key dates, eligibility and documents for the 2026–27 year.",
-      },
-    ],
-  }),
-  component: Admissions,
-});
-
-function Admissions() {
+export default function Admissions() {
   const { t } = useLanguage();
 
   const steps = [
@@ -117,7 +100,7 @@ function Admissions() {
             />
             <Reveal delay={0.1}>
               <Link
-                to="/contact"
+                href="/contact"
                 className="mt-8 inline-flex items-center rounded-xl bg-primary px-6 py-3.5 text-sm font-medium text-primary-foreground shadow-soft transition-all hover:shadow-lift"
               >
                 {t("admissions.visit.cta")}

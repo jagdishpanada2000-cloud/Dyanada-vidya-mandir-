@@ -1,29 +1,11 @@
-import { createFileRoute } from "@tanstack/react-router";
+"use client";
+
 import { BookMarked, Dumbbell, FlaskConical, Laptop, Music, Trees } from "lucide-react";
 import { useLanguage } from "@/lib/language";
 import { PageHero, Reveal, Section, SectionHeading } from "@/components/Section";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 
-export const Route = createFileRoute("/facilities")({
-  head: () => ({
-    meta: [
-      { title: "Facilities | Gyanada Vidya Mandir, Ulhasnagar-4" },
-      {
-        name: "description",
-        content:
-          "Laboratories, library, sports grounds and arts spaces at Gyanada Vidya Mandir, Ulhasnagar-4.",
-      },
-      { property: "og:title", content: "Facilities | Gyanada Vidya Mandir, Ulhasnagar-4" },
-      {
-        property: "og:description",
-        content: "Laboratories, library, sports grounds and arts spaces at our Ulhasnagar-4 campus.",
-      },
-    ],
-  }),
-  component: Facilities,
-});
-
-function Facilities() {
+export default function Facilities() {
   const { t } = useLanguage();
 
   const facilities = [

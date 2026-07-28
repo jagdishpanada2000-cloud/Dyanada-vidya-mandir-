@@ -1,28 +1,10 @@
-import { createFileRoute } from "@tanstack/react-router";
+"use client";
+
 import { useLanguage } from "@/lib/language";
 import { PageHero, Reveal, Section, SectionHeading } from "@/components/Section";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 
-export const Route = createFileRoute("/academics")({
-  head: () => ({
-    meta: [
-      { title: "Academic | Gyanada Vidya Mandir, Ulhasnagar-4" },
-      {
-        name: "description",
-        content:
-          "Curriculum, streams and academic approach from pre-primary to higher secondary at Gyanada Vidya Mandir, Ulhasnagar-4.",
-      },
-      { property: "og:title", content: "Academic | Gyanada Vidya Mandir, Ulhasnagar-4" },
-      {
-        property: "og:description",
-        content: "Curriculum, streams and academic approach at Gyanada Vidya Mandir, Ulhasnagar-4.",
-      },
-    ],
-  }),
-  component: Academics,
-});
-
-function Academics() {
+export default function Academics() {
   const { t } = useLanguage();
 
   const stages = [

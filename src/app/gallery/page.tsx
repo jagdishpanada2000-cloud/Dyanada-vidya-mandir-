@@ -1,28 +1,10 @@
+"use client";
+
 import { useState } from "react";
-import { createFileRoute } from "@tanstack/react-router";
 import { useLanguage } from "@/lib/language";
 import { PageHero, Reveal, Section } from "@/components/Section";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { cn } from "@/lib/utils";
-
-export const Route = createFileRoute("/gallery")({
-  head: () => ({
-    meta: [
-      { title: "Gallery | Gyanada Vidya Mandir, Ulhasnagar-4" },
-      {
-        name: "description",
-        content:
-          "Photographs of campus life, events, sport and culture at Gyanada Vidya Mandir, Ulhasnagar-4.",
-      },
-      { property: "og:title", content: "Gallery | Gyanada Vidya Mandir, Ulhasnagar-4" },
-      {
-        property: "og:description",
-        content: "Photographs of campus life, events, sport and culture at our Ulhasnagar-4 school.",
-      },
-    ],
-  }),
-  component: Gallery,
-});
 
 type Category = "All" | "Campus" | "Events" | "Sport" | "Culture";
 
@@ -46,7 +28,7 @@ const items: { labelKey: string; category: Category; ratio: "4/3" | "3/4" }[] = 
   { labelKey: "gallery.item9", category: "Culture", ratio: "4/3" },
 ];
 
-function Gallery() {
+export default function Gallery() {
   const { t } = useLanguage();
   const [active, setActive] = useState<Category>("All");
   const visible = active === "All" ? items : items.filter((i) => i.category === active);

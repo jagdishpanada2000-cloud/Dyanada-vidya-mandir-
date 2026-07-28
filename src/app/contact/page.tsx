@@ -1,35 +1,17 @@
-import { createFileRoute } from "@tanstack/react-router";
+"use client";
+
 import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import { useLanguage } from "@/lib/language";
 import { PageHero, Reveal, Section } from "@/components/Section";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 
-export const Route = createFileRoute("/contact")({
-  head: () => ({
-    meta: [
-      { title: "Contact | Gyanada Vidya Mandir, Ulhasnagar-4" },
-      {
-        name: "description",
-        content:
-          "Address, phone, email and office hours for Gyanada Vidya Mandir, Ulhasnagar-4.",
-      },
-      { property: "og:title", content: "Contact | Gyanada Vidya Mandir, Ulhasnagar-4" },
-      {
-        property: "og:description",
-        content: "Address, phone, email and office hours for Gyanada Vidya Mandir, Ulhasnagar-4.",
-      },
-    ],
-  }),
-  component: Contact,
-});
-
-function Contact() {
+export default function Contact() {
   const { t } = useLanguage();
 
   const details = [
     { icon: MapPin, label: t("contact.detail1.label"), value: "उल्हासनगर-४, ठाणे, महाराष्ट्र" },
     { icon: Phone, label: t("contact.detail2.label"), value: "+91 251 XXX XXXX" },
-    { icon: Mail, label: t("contact.detail3.label"), value: "info@gyanadavm.edu.in" },
+    { icon: Mail, label: t("contact.detail3.label"), value: "info@dnyanadavm.edu.in" },
     { icon: Clock, label: t("contact.detail4.label"), value: "Monday to Saturday, 8:00 am – 2:30 pm" },
   ];
 

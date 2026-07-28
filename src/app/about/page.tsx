@@ -1,26 +1,8 @@
-import { createFileRoute } from "@tanstack/react-router";
+"use client";
+
 import { useLanguage } from "@/lib/language";
 import { PageHero, Reveal, Section, SectionHeading } from "@/components/Section";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
-
-export const Route = createFileRoute("/about")({
-  head: () => ({
-    meta: [
-      { title: "About Us | Gyanada Vidya Mandir, Ulhasnagar-4" },
-      {
-        name: "description",
-        content:
-          "The history, vision, mission and values of Gyanada Vidya Mandir — a school serving Ulhasnagar families since 1975.",
-      },
-      { property: "og:title", content: "About Us | Gyanada Vidya Mandir, Ulhasnagar-4" },
-      {
-        property: "og:description",
-        content: "The history, vision and values of Gyanada Vidya Mandir, Ulhasnagar-4.",
-      },
-    ],
-  }),
-  component: About,
-});
 
 const coreValues = [
   "ज्ञान", "संस्कार", "शिस्त", "प्रामाणिकपणा", "आदर",
@@ -32,7 +14,7 @@ const coreValuesEn = [
   "Cooperation (सहकार्य)", "Creativity (सर्जनशीलता)", "Compassion (करुणा)", "Social Commitment (सामाजिक बांधिलकी)", "Patriotism (देशप्रेम)",
 ];
 
-function About() {
+export default function About() {
   const { t, language } = useLanguage();
   const values = language === "en" ? coreValuesEn : coreValues;
 

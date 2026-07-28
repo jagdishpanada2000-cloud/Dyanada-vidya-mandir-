@@ -1,5 +1,7 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { motion } from "motion/react";
+"use client";
+
+import Link from "next/link";
+import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/lib/language";
 import { Reveal, Section } from "@/components/Section";
@@ -33,7 +35,7 @@ const coreValuesEn = [
   "Cooperation (सहकार्य)", "Creativity (सर्जनशीलता)", "Compassion (करुणा)", "Social Commitment (सामाजिक बांधिलकी)", "Patriotism (देशप्रेम)",
 ];
 
-function Home() {
+export default function Home() {
   const { t, language } = useLanguage();
 
   const stats = [
@@ -70,7 +72,7 @@ function Home() {
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
               <Link
-                to="/admissions"
+                href="/admissions"
                 className="group inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3.5 text-sm font-medium text-primary-foreground shadow-soft transition-all hover:shadow-lift"
               >
                 {t("home.hero.cta")}
@@ -80,7 +82,7 @@ function Home() {
                 />
               </Link>
               <Link
-                to="/about"
+                href="/about"
                 className="inline-flex items-center rounded-xl border border-border bg-surface px-6 py-3.5 text-sm font-medium text-primary transition-colors hover:border-gold"
               >
                 {t("home.hero.cta2")}
@@ -94,7 +96,7 @@ function Home() {
             transition={{ duration: 0.9, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
             className="relative"
           >
-            <ImagePlaceholder label="Gyanada Vidya Mandir Campus" ratio="4/5" className="shadow-lift" />
+            <ImagePlaceholder label="Dnyanada Vidya Mandir Campus" ratio="4/5" className="shadow-lift" />
             <div className="absolute -bottom-6 -left-6 hidden w-56 rounded-2xl border border-border bg-surface/80 p-5 shadow-soft backdrop-blur-md sm:block">
               <span className="font-display text-3xl font-semibold text-primary">50+</span>
               <p className="mt-1 text-xs tracking-[0.16em] uppercase text-muted-foreground">

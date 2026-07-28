@@ -1,3 +1,5 @@
+"use client";
+
 import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
 
 export type Language = "en" | "mr";
@@ -31,16 +33,16 @@ const translations: Translations = {
   /* Home */
   "home.hero.eyebrow": { en: "Since 1975 · Ulhasnagar-4", mr: "१९७५ पासून · उल्हासनगर-४" },
   "home.hero.tagline": {
-    en: "“Empowering Minds, Enriching Values, Building a Brighter Future.”",
-    mr: "“ज्ञानातून प्रगती, संस्कारातून व्यक्तिमत्त्व आणि शिक्षणातून उज्ज्वल भविष्य!”",
+    en: '"Empowering Minds, Enriching Values, Building a Brighter Future."',
+    mr: '"ज्ञानातून प्रगती, संस्कारातून व्यक्तिमत्त्व आणि शिक्षणातून उज्ज्वल भविष्य!"',
   },
-  "home.hero.motto": { en: "“Tamaso Maa Jyotirgamaya”", mr: "“तमसो मा ज्योतिर्गमय”" },
+  "home.hero.motto": { en: '"Tamaso Maa Jyotirgamaya"', mr: '"तमसो मा ज्योतिर्गमय"' },
   "home.hero.title": {
     en: "A legacy of knowledge, values and progress",
     mr: "ज्ञान, संस्कार आणि प्रगतीचा वारसा",
   },
   "home.hero.desc": {
-    en: "For five decades, Gyanada Vidya Mandir has nurtured students with knowledge, values and quality education — shaping confident, capable and responsible citizens.",
+    en: "For five decades, Dnyanada Vidya Mandir has nurtured students with knowledge, values and quality education — shaping confident, capable and responsible citizens.",
     mr: "पाच दशकांपासून ज्ञानदा विद्या मंदिरने विद्यार्थ्यांना ज्ञान, संस्कार आणि गुणवत्तापूर्ण शिक्षण देऊन आत्मविश्वासू, सक्षम आणि जबाबदार नागरिक घडवले आहेत.",
   },
   "home.hero.cta": { en: "Admissions 2026–27", mr: "प्रवेश २०२६-२७" },
@@ -53,25 +55,25 @@ const translations: Translations = {
   "home.stats.results": { en: "Board Results", mr: "बोर्ड निकाल" },
 
   "home.closing": {
-    en: "Gyanada Vidya Mandir — an enduring journey of knowledge, values and progress!",
+    en: "Dnyanada Vidya Mandir — an enduring journey of knowledge, values and progress!",
     mr: "ज्ञानदा विद्या मंदिर — ज्ञान, संस्कार आणि प्रगतीची अखंड वाटचाल!",
   },
 
   /* About – History (verbatim) */
   "about.history.p1": {
-    en: "Gyanada Vidya Mandir, Ulhasnagar-4 was established in 1975. The school's academic journey began through Priyadarshini Shikshan Prasarak Mandal. The institution was founded with the noble goal of providing students with knowledge, values and excellent moral grounding through education, and fostering their holistic development.",
+    en: "Dnyanada Vidya Mandir, Ulhasnagar-4 was established in 1975. The school's academic journey began through Priyadarshini Shikshan Prasarak Mandal. The institution was founded with the noble goal of providing students with knowledge, values and excellent moral grounding through education, and fostering their holistic development.",
     mr: "ज्ञानदा विद्या मंदिर, उल्हासनगर-४ या शाळेची स्थापना सन १९७५ मध्ये झाली. शाळेची शैक्षणिक वाटचाल प्रियदर्शनी शिक्षण प्रसारक मंडळ या संस्थेच्या माध्यमातून सुरू झाली. शिक्षणाच्या माध्यमातून समाजातील विद्यार्थ्यांना ज्ञान, संस्कार आणि उत्तम मूल्यांची शिदोरी देऊन त्यांचा सर्वांगीण विकास घडवून आणणे, या उदात्त ध्येयाने संस्थेची स्थापना करण्यात आली.",
   },
   "about.history.p2": {
-    en: "Founder Smt. Malati Devalalikar, who laid the foundation of this educational work and made a significant contribution to the establishment of the institution, recognized the importance of education and opened the doors of knowledge for students. Through her vision, dedication and educational philosophy, Priyadarshini Shikshan Prasarak Mandal was established, and through that same educational journey, Gyanada Vidya Mandir continues this tradition of knowledge, values and quality education.",
-    mr: "या शैक्षणिक कार्याची पायाभरणी करणाऱ्या आणि संस्थेच्या स्थापनेत महत्त्वपूर्ण योगदान देणाऱ्या संस्थापिका श्रीमती मालती देवळालीकर यांनी शिक्षणाचे महत्त्व ओळखून विद्यार्थ्यांसाठी ज्ञानाचे दालन खुले करण्याचे कार्य केले. त्यांच्या दूरदृष्टी, समर्पण आणि शैक्षणिक ध्येयधोरणातून प्रियदर्शनी शिक्षण प्रसारक मंडळ या संस्थेची उभारणी झाली आणि त्याच शैक्षणिक प्रवासातून ज्ञानदा विद्या मंदिर ही ज्ञान, संस्कार आणि गुणवत्तापूर्ण शिक्षणाची परंपरा पुढे घेऊन जात आहे.",
+    en: "Founder Smt. Malati Devalalikar, who laid the foundation of this educational work and made a significant contribution to the establishment of the institution, recognized the importance of education and opened the doors of knowledge for students. Through her vision, dedication and educational philosophy, Priyadarshini Shikshan Prasarak Mandal was established, and through that same educational journey, Dnyanada Vidya Mandir continues this tradition of knowledge, values and quality education.",
+    mr: "या शैक्षणिक कार्याची पायाभरणी करणाऱ्या आणि संस्थेच्या स्थापनेत महत्त्वपूर्ण योगदान देणाऱ्या संस्थापिका श्रीमती मालती देवळालीकर यांनी शिक्षणाचे महत्त्व ओळखून विद्यार्थ्यांसाठी ज्ञानाचे दालन खुले करण्याचे कार्य केले. त्यांच्या दूरदृष्टी, समर्पण आणि शैक्षणिक ध्येयधोरणातून प्रियदर्शनी शिक्षण प्रसारक मंडळ या संस्थेची उभारणी झाली आणि त्याच शैक्षणिक प्रवासातून ज्ञानदा विद्या मंदिर ही ज्ञान, संस्कार आणि गुणवत्तापूर्ण शिक्षणाची परंपरा पुढे नेत आहे.",
   },
   "about.history.p3": {
-    en: "From 1975 to the present day, Gyanada Vidya Mandir has consistently focused on the holistic development of students. Adapting necessary changes in the education system according to changing times, the school strives to provide students with modern knowledge, technology, skills and value-based education. Along with academic quality, the school runs various activities to develop discipline, values, creativity, self-confidence, social commitment and a sense of responsible citizenship in students.",
+    en: "From 1975 to the present day, Dnyanada Vidya Mandir has consistently focused on the holistic development of students. Adapting necessary changes in the education system according to changing times, the school strives to provide students with modern knowledge, technology, skills and value-based education. Along with academic quality, the school runs various activities to develop discipline, values, creativity, self-confidence, social commitment and a sense of responsible citizenship in students.",
     mr: "सन १९७५ पासून आजपर्यंत ज्ञानदा विद्या मंदिरने विद्यार्थ्यांच्या सर्वांगीण विकासाला केंद्रस्थानी ठेवून आपली शैक्षणिक वाटचाल सातत्याने सुरू ठेवली आहे. बदलत्या काळानुसार शिक्षणपद्धतीमध्ये आवश्यक ते बदल स्वीकारत शाळा विद्यार्थ्यांना आधुनिक ज्ञान, तंत्रज्ञान, कौशल्ये आणि मूल्याधिष्ठित शिक्षण देण्यासाठी प्रयत्नशील आहे. शैक्षणिक गुणवत्तेसोबतच विद्यार्थ्यांमध्ये शिस्त, संस्कार, सर्जनशीलता, आत्मविश्वास, सामाजिक बांधिलकी आणि जबाबदार नागरिकत्वाची भावना विकसित करण्यासाठी शाळा विविध उपक्रम राबविते.",
   },
   "about.history.p4": {
-    en: "Today, Gyanada Vidya Mandir is inspired by the thought — “Empowering Minds, Enriching Values, Building a Brighter Future” — and is working for the bright future of students. Preserving the legacy of the educational thoughts and service-oriented approach of founder Smt. Malati Devalalikar, the school continues the work of shaping capable, sensitive, value-driven and responsible citizens.",
+    en: "Today, Dnyanada Vidya Mandir is inspired by the thought — \"Empowering Minds, Enriching Values, Building a Brighter Future\" — and is working for the bright future of students. Preserving the legacy of the educational thoughts and service-oriented approach of founder Smt. Malati Devalalikar, the school continues the work of shaping capable, sensitive, value-driven and responsible citizens.",
     mr: "आज ज्ञानदा विद्या मंदिर ही “ज्ञानातून प्रगती, संस्कारातून व्यक्तिमत्त्व आणि शिक्षणातून उज्ज्वल भविष्य” या विचाराने प्रेरित होऊन विद्यार्थ्यांच्या उज्ज्वल भविष्यासाठी कार्यरत आहे. संस्थेच्या संस्थापिका श्रीमती मालती देवळालीकर यांच्या शैक्षणिक विचारांचा आणि सेवाभावी दृष्टिकोनाचा वारसा जपत शाळा विद्यार्थ्यांना सक्षम, संवेदनशील, संस्कारक्षम आणि जबाबदार नागरिक घडविण्याचे कार्य पुढे नेत आहे.",
   },
 
@@ -83,11 +85,11 @@ const translations: Translations = {
 
   /* About – Logo (verbatim) */
   "about.logo.text": {
-    en: "Gyanada Vidya Mandir, Ulhasnagar-4 is working through Priyadarshini Shikshan Prasarak Mandal to provide students with knowledge, values and quality education. The school logo is a symbol of the institution's educational philosophy and the holistic development of students. The various elements in the logo represent knowledge, education, values, progress and a bright future.",
+    en: "Dnyanada Vidya Mandir, Ulhasnagar-4 is working through Priyadarshini Shikshan Prasarak Mandal to provide students with knowledge, values and quality education. The school logo is a symbol of the institution's educational philosophy and the holistic development of students. The various elements in the logo represent knowledge, education, values, progress and a bright future.",
     mr: "ज्ञानदा विद्या मंदिर, उल्हासनगर-४ हे प्रियदर्शनी शिक्षण प्रसारक मंडळ या संस्थेच्या माध्यमातून विद्यार्थ्यांना ज्ञान, संस्कार आणि गुणवत्तापूर्ण शिक्षण देण्यासाठी कार्यरत आहे. शाळेचा लोगो हा संस्थेच्या शैक्षणिक ध्येयधोरणाचे आणि विद्यार्थ्यांच्या सर्वांगीण विकासाचे प्रतीक आहे. लोगोमधील विविध घटक ज्ञान, शिक्षण, संस्कार, प्रगती आणि उज्ज्वल भविष्य यांचे प्रतिनिधित्व करतात.",
   },
   "about.logo.motto": {
-    en: "The school motto is “Tamaso Maa Jyotirgamaya” — from darkness, lead us to light. This is the school's logo.",
+    en: "The school motto is \"Tamaso Maa Jyotirgamaya\" — from darkness, lead us to light. This is the school's logo.",
     mr: "शाळेचे ब्रीदवाक्य “तमसो मा ज्योतिर्गमय” हे शाळेचे ब्रीदवाक्य आहे अंधारातून प्रकाशाकडे असा शाळेचा लोगो आहे.",
   },
 
@@ -122,7 +124,7 @@ const translations: Translations = {
     mr: "मुलासोबत वाढणारा अभ्यासक्रम",
   },
   "academics.hero.intro": {
-    en: "Gyanada Vidya Mandir follows the Maharashtra State Board curriculum from pre-primary through higher secondary, blending academic rigour with co-curricular enrichment.",
+    en: "Dnyanada Vidya Mandir follows the Maharashtra State Board curriculum from pre-primary through higher secondary, blending academic rigour with co-curricular enrichment.",
     mr: "ज्ञानदा विद्या मंदिर पूर्व-प्राथमिक ते उच्च माध्यमिकपर्यंत महाराष्ट्र राज्य मंडळाचा अभ्यासक्रम अनुसरते, शैक्षणिक कठोरता आणि सह-अभ्यासक्रमिक समृद्धी यांचा समतोल साधते.",
   },
   "academics.stages.eyebrow": { en: "Stages", mr: "टप्पे" },
@@ -156,7 +158,7 @@ const translations: Translations = {
   "admissions.date4.label": { en: "Session begins", mr: "सत्र सुरू" },
   "admissions.office": { en: "Admissions Office", mr: "प्रवेश कार्यालय" },
   "admissions.hero.title": {
-    en: "Join Gyanada Vidya Mandir",
+    en: "Join Dnyanada Vidya Mandir",
     mr: "ज्ञानदा विद्या मंदिरमध्ये प्रवेश",
   },
   "admissions.hero.intro": {
@@ -279,15 +281,15 @@ const translations: Translations = {
   "alumni.v3.name": { en: "Aarti Joshi", mr: "आरती जोशी" },
   "alumni.v3.batch": { en: "Batch of 2011", mr: "२०११ चा बॅच" },
   "alumni.v3.role": { en: "Marathi Author", mr: "मराठी लेखिका" },
-  "alumni.v3.quote": { en: "The school library gave me my first readers and my first honest critics. I still visit every Diwali.", mr: "शाळेच्या ग्रंथालयाने मला माझे पहिले वाचक आणि माझे पहिले प्रामाणिक समीक्षक दिले. मी अजूनही दर दिवाळीला भेट देतात." },
+  "alumni.v3.quote": { en: "The school library gave me my first readers and my first honest critics. I still visit every Diwali.", mr: "शाळेच्या ग्रंथालयाने मला माझे पहिले वाचक आणि माझे प्रामाणिक समीक्षक दिले. मी अजूनही दर दिवाळीला भेट देतात." },
   "alumni.reunion": { en: "Alumni Reunion", mr: "माजी विद्यार्थी पुनर्मिलन" },
   "alumni.email": { en: "alumni@gyanadavm.edu.in", mr: "alumni@gyanadavm.edu.in" },
   "alumni.hero.title": {
-    en: "Once a Gyanadan, always a Gyanadan",
+    en: "Once a Dnyanadan, always a Dnyanadan",
     mr: "एकदा ज्ञानदाचे, तर नेहमी ज्ञानदाचे",
   },
   "alumni.hero.intro": {
-    en: "Our alumni carry the values of Gyanada Vidya Mandir into every corner of Maharashtra and beyond.",
+    en: "Our alumni carry the values of Dnyanada Vidya Mandir into every corner of Maharashtra and beyond.",
     mr: "आमचे माजी विद्यार्थी ज्ञानदा विद्या मंदिरची मूल्ये महाराष्ट्राच्या प्रत्येक कोपऱ्यात आणि त्यापलीकडे नेतात.",
   },
   "alumni.voices.eyebrow": { en: "Voices", mr: "आवाज" },
