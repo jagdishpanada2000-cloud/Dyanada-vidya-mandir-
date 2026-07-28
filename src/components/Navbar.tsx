@@ -78,12 +78,12 @@ export function Navbar() {
             alt={t("nav.schoolName")}
             className={cn(
               "shrink-0 rounded-full object-cover transition-all duration-500",
-              scrolled ? "h-9 w-9" : "h-11 w-11",
+              scrolled ? "h-10 w-10" : "h-14 w-14",
             )}
           />
           <span className="min-w-0">
             <span className="block truncate font-display text-lg leading-tight font-semibold text-primary sm:text-xl">
-              {t("nav.schoolName")}
+              ज्ञानदा विद्या मंदिर
             </span>
             <span className="hidden text-[0.65rem] tracking-[0.2em] uppercase text-muted-foreground sm:block">
               {t("footer.tagline")}
