@@ -122,7 +122,7 @@ export default function Home() {
       </section>
 
       <div className="flex justify-center py-8">
-        <img src="https://res.cloudinary.com/dwta5v9wi/image/upload/v1785330324/copy_of_section_end_uqkgou.png" alt="" className="h-8 opacity-40 sm:h-10" />
+        <img src="https://res.cloudinary.com/dwta5v9wi/image/upload/v1785330324/copy_of_section_end_uqkgou.png" alt="" className="h-5 opacity-40 sm:h-10" />
       </div>
 
       <section className="border-b border-border bg-beige py-20 sm:py-28">
@@ -162,7 +162,7 @@ export default function Home() {
       </section>
 
       <div className="flex justify-center py-8">
-        <img src="https://res.cloudinary.com/dwta5v9wi/image/upload/v1785330324/copy_of_section_end_uqkgou.png" alt="" className="h-8 opacity-40 sm:h-10" />
+        <img src="https://res.cloudinary.com/dwta5v9wi/image/upload/v1785330324/copy_of_section_end_uqkgou.png" alt="" className="h-5 opacity-40 sm:h-10" />
       </div>
 
       <Section>
@@ -195,7 +195,7 @@ export default function Home() {
       </Section>
 
       <div className="flex justify-center py-8">
-        <img src="https://res.cloudinary.com/dwta5v9wi/image/upload/v1785330324/copy_of_section_end_uqkgou.png" alt="" className="h-8 opacity-40 sm:h-10" />
+        <img src="https://res.cloudinary.com/dwta5v9wi/image/upload/v1785330324/copy_of_section_end_uqkgou.png" alt="" className="h-5 opacity-40 sm:h-10" />
       </div>
 
       <section className="bg-primary py-16 text-center text-primary-foreground">

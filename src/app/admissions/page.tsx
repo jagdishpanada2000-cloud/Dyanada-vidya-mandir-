@@ -54,7 +54,7 @@ export default function Admissions() {
         </div>
       </Section>
       <div className="flex justify-center py-8">
-        <img src="https://res.cloudinary.com/dwta5v9wi/image/upload/v1785330324/copy_of_section_end_uqkgou.png" alt="" className="h-8 opacity-40 sm:h-10" />
+        <img src="https://res.cloudinary.com/dwta5v9wi/image/upload/v1785330324/copy_of_section_end_uqkgou.png" alt="" className="h-5 opacity-40 sm:h-10" />
       </div>
 
       <Section alt>
@@ -90,7 +90,7 @@ export default function Admissions() {
         </div>
       </Section>
       <div className="flex justify-center py-8">
-        <img src="https://res.cloudinary.com/dwta5v9wi/image/upload/v1785330324/copy_of_section_end_uqkgou.png" alt="" className="h-8 opacity-40 sm:h-10" />
+        <img src="https://res.cloudinary.com/dwta5v9wi/image/upload/v1785330324/copy_of_section_end_uqkgou.png" alt="" className="h-5 opacity-40 sm:h-10" />
       </div>
 
       <Section>
