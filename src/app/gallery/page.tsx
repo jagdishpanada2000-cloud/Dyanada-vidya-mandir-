@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { useLanguage } from "@/lib/language";
 import { PageHero, Reveal, Section } from "@/components/Section";
-import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { cn } from "@/lib/utils";
 
 type Category = "All" | "Campus" | "Events" | "Sport" | "Culture";
@@ -16,17 +15,29 @@ const filters: { key: Category; labelKey: string }[] = [
   { key: "Culture", labelKey: "gallery.filter5" },
 ];
 
-const items: { labelKey: string; category: Category; ratio: "4/3" | "3/4" }[] = [
-  { labelKey: "gallery.item1", category: "Campus", ratio: "4/3" },
-  { labelKey: "gallery.item2", category: "Events", ratio: "3/4" },
-  { labelKey: "gallery.item3", category: "Sport", ratio: "4/3" },
-  { labelKey: "gallery.item4", category: "Campus", ratio: "4/3" },
-  { labelKey: "gallery.item5", category: "Culture", ratio: "3/4" },
-  { labelKey: "gallery.item6", category: "Events", ratio: "4/3" },
-  { labelKey: "gallery.item7", category: "Sport", ratio: "4/3" },
-  { labelKey: "gallery.item8", category: "Campus", ratio: "3/4" },
-  { labelKey: "gallery.item9", category: "Culture", ratio: "4/3" },
+const images = [
+  "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785327256/WhatsApp_Image_2026-07-27_at_11.58.48_PM_1_xwjuef.jpg",
+  "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785327256/WhatsApp_Image_2026-07-27_at_11.58.49_PM_1_frkcmo.jpg",
+  "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785327256/WhatsApp_Image_2026-07-27_at_11.58.49_PM_2_ptwkqk.jpg",
+  "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785327257/WhatsApp_Image_2026-07-27_at_11.58.49_PM_3_lsoypn.jpg",
+  "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785327257/WhatsApp_Image_2026-07-27_at_11.58.50_PM_1_gmcg77.jpg",
+  "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785327257/WhatsApp_Image_2026-07-27_at_11.58.50_PM_finim4.jpg",
+  "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785327263/WhatsApp_Image_2026-07-27_at_11.58.56_PM_eidtt0.jpg",
+  "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785327266/WhatsApp_Image_2026-07-27_at_11.58.59_PM_ctzg97.jpg",
+  "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785327267/WhatsApp_Image_2026-07-27_at_11.59.01_PM_evg5qz.jpg",
+  "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785327273/WhatsApp_Image_2026-07-27_at_11.59.07_PM_ik7nl1.jpg",
+  "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785327274/WhatsApp_Image_2026-07-27_at_11.59.09_PM_2_yhimdw.jpg",
+  "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785327272/WhatsApp_Image_2026-07-27_at_11.59.06_PM_kdrhxc.jpg",
+  "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785327271/WhatsApp_Image_2026-07-27_at_11.59.05_PM_2_p1xgwu.jpg",
 ];
+
+const categories: Category[] = ["Campus", "Events", "Sport", "Culture"];
+
+const items = images.map((src, i) => ({
+  src,
+  category: categories[i % categories.length],
+  ratio: (i % 3 === 0 ? "3/4" : "4/3") as "4/3" | "3/4",
+}));
 
 export default function Gallery() {
   const { t } = useLanguage();
@@ -62,13 +73,13 @@ export default function Gallery() {
 
         <div className="mt-12 columns-1 gap-5 sm:columns-2 lg:columns-3 [&>*]:mb-5">
           {visible.map((item, i) => (
-            <Reveal key={item.labelKey} delay={(i % 6) * 0.05} className="break-inside-avoid">
-              <figure className="group">
-                <ImagePlaceholder label={t(item.labelKey)} ratio={item.ratio} />
-                <figcaption className="mt-3 text-xs tracking-[0.14em] uppercase text-muted-foreground transition-colors group-hover:text-primary">
-                  {t(item.labelKey)}
-                </figcaption>
-              </figure>
+            <Reveal key={i} delay={(i % 6) * 0.05} className="break-inside-avoid">
+              <img
+                src={item.src}
+                alt=""
+                className="w-full rounded-2xl object-cover"
+                style={{ aspectRatio: item.ratio }}
+              />
             </Reveal>
           ))}
         </div>
