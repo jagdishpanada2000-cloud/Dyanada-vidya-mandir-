@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, BookOpen, Heart, Scale, Shield, Handshake, Users, Lightbulb, HeartHandshake, Globe, Flag } from "lucide-react";
 import { useLanguage } from "@/lib/language";
 import { Reveal, Section } from "@/components/Section";
@@ -21,8 +22,20 @@ const coreValueData = [
   { mr: "देशप्रेम", en: "Patriotism", icon: Flag },
 ];
 
+const missionImages = [
+  "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785325918/2_erqz3m.jpg",
+  "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785326265/3_jrpjcl.jpg",
+  "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785326265/4_zkgbso.jpg",
+];
+
 export default function Home() {
   const { t, language } = useLanguage();
+  const [missionImg, setMissionImg] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(() => setMissionImg((i) => (i + 1) % missionImages.length), 4000);
+    return () => clearInterval(id);
+  }, []);
 
   const stats = [
     { value: "1975", label: t("home.stats.founded") },
@@ -147,7 +160,20 @@ export default function Home() {
       <Section>
         <div className="grid gap-14 lg:grid-cols-2 lg:items-center">
           <Reveal>
-            <img src="https://res.cloudinary.com/dwta5v9wi/image/upload/v1785325918/2_erqz3m.jpg" alt="School Building" className="h-full w-full rounded-2xl object-cover" />
+            <div className="relative aspect-[5/4] overflow-hidden rounded-2xl">
+              <AnimatePresence mode="wait">
+                <motion.img
+                  key={missionImg}
+                  src={missionImages[missionImg]}
+                  alt="School Building"
+                  className="absolute inset-0 h-full w-full object-cover"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.7 }}
+                />
+              </AnimatePresence>
+            </div>
           </Reveal>
           <div>
             <Reveal>
