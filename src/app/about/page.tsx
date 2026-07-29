@@ -48,6 +48,9 @@ export default function About() {
           </p>
         </Reveal>
       </Section>
+      <div className="flex justify-center py-8">
+        <img src="https://res.cloudinary.com/dwta5v9wi/image/upload/v1785330324/copy_of_section_end_uqkgou.png" alt="" className="h-8 opacity-40 sm:h-10" />
+      </div>
 
       <Section alt>
         <SectionHeading
@@ -56,6 +59,9 @@ export default function About() {
           center
         />
       </Section>
+      <div className="flex justify-center py-8">
+        <img src="https://res.cloudinary.com/dwta5v9wi/image/upload/v1785330324/copy_of_section_end_uqkgou.png" alt="" className="h-8 opacity-40 sm:h-10" />
+      </div>
 
       <Section>
         <SectionHeading
@@ -65,6 +71,9 @@ export default function About() {
           center
         />
       </Section>
+      <div className="flex justify-center py-8">
+        <img src="https://res.cloudinary.com/dwta5v9wi/image/upload/v1785330324/copy_of_section_end_uqkgou.png" alt="" className="h-8 opacity-40 sm:h-10" />
+      </div>
 
       <Section alt>
         <SectionHeading
@@ -88,6 +97,9 @@ export default function About() {
           </div>
         </Reveal>
       </Section>
+      <div className="flex justify-center py-8">
+        <img src="https://res.cloudinary.com/dwta5v9wi/image/upload/v1785330324/copy_of_section_end_uqkgou.png" alt="" className="h-8 opacity-40 sm:h-10" />
+      </div>
 
       <Section>
         <SectionHeading

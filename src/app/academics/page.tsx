@@ -44,6 +44,9 @@ export default function Academics() {
           ))}
         </div>
       </Section>
+      <div className="flex justify-center py-8">
+        <img src="https://res.cloudinary.com/dwta5v9wi/image/upload/v1785330324/copy_of_section_end_uqkgou.png" alt="" className="h-8 opacity-40 sm:h-10" />
+      </div>
 
       <Section alt>
         <div className="grid gap-14 lg:grid-cols-2 lg:items-center">
