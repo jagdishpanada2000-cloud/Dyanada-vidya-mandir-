@@ -82,7 +82,7 @@ export default function Home() {
             transition={{ duration: 0.9, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
             className="relative"
           >
-            <ImagePlaceholder label="Dnyanada Vidya Mandir Campus" ratio="4/5" className="shadow-lift" />
+            <img src="https://res.cloudinary.com/dwta5v9wi/image/upload/v1785325733/1_ayyjy1.jpg" alt="Dnyanada Vidya Mandir Campus" className="h-full w-full rounded-2xl object-cover shadow-lift" />
             <div className="absolute -bottom-6 -left-6 hidden w-56 rounded-2xl border border-border bg-surface/80 p-5 shadow-soft backdrop-blur-md sm:block">
               <span className="font-display text-3xl font-semibold text-primary">{language === "mr" ? toMarathiNum("50+") : "50+"}</span>
               <p className="mt-1 text-xs tracking-[0.16em] uppercase text-muted-foreground">
@@ -147,7 +147,7 @@ export default function Home() {
       <Section>
         <div className="grid gap-14 lg:grid-cols-2 lg:items-center">
           <Reveal>
-            <ImagePlaceholder label="School Building" ratio="5/4" />
+            <img src="https://res.cloudinary.com/dwta5v9wi/image/upload/v1785325918/2_erqz3m.jpg" alt="School Building" className="h-full w-full rounded-2xl object-cover" />
           </Reveal>
           <div>
             <Reveal>
