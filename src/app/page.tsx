@@ -121,6 +121,10 @@ export default function Home() {
         </div>
       </section>
 
+      <div className="flex justify-center">
+        <img src="https://res.cloudinary.com/dwta5v9wi/image/upload/v1785330324/copy_of_section_end_uqkgou.png" alt="" className="h-8 sm:h-10" />
+      </div>
+
       <section className="border-b border-border bg-beige py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <Reveal className="mx-auto max-w-2xl text-center">
@@ -156,6 +160,10 @@ export default function Home() {
           </Reveal>
         </div>
       </section>
+
+      <div className="flex justify-center">
+        <img src="https://res.cloudinary.com/dwta5v9wi/image/upload/v1785330324/copy_of_section_end_uqkgou.png" alt="" className="h-8 sm:h-10" />
+      </div>
 
       <Section>
         <div className="grid gap-14 lg:grid-cols-2 lg:items-center">
