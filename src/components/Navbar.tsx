@@ -74,7 +74,7 @@ export function Navbar() {
           scrolled ? "h-16" : "h-20",
         )}
       >
-        <Link href="/" className="flex shrink-0 items-center gap-3">
+        <Link href="/" className="flex min-w-0 items-center gap-3">
           <img
             src="https://res.cloudinary.com/dwta5v9wi/image/upload/v1785258631/LOGO_krcdwh.png"
             alt={t("nav.schoolName")}
@@ -83,8 +83,8 @@ export function Navbar() {
               scrolled ? "h-10 w-10" : "h-14 w-14",
             )}
           />
-          <span className="flex flex-col">
-            <span className="whitespace-nowrap font-display text-lg leading-tight font-semibold text-primary sm:text-xl">
+          <span className="flex min-w-0 flex-col">
+            <span className="truncate font-display text-lg leading-tight font-semibold text-primary sm:whitespace-nowrap sm:text-xl">
               ज्ञानदा विद्या मंदिर
             </span>
             <span className="hidden text-[0.65rem] tracking-[0.2em] uppercase text-muted-foreground sm:block">

@@ -3,7 +3,6 @@
 import { Phone } from "lucide-react";
 
 const PHONE = "+919272698531";
-const PHONE_DISPLAY = "+91 92726 98531";
 const WHATSAPP = `https://wa.me/${PHONE.replace("+", "")}`;
 
 export function FloatingContact() {
@@ -26,12 +25,6 @@ export function FloatingContact() {
         className="grid h-12 w-12 place-items-center rounded-full bg-primary text-primary-foreground shadow-lift transition-transform hover:scale-110"
       >
         <Phone className="h-5 w-5" strokeWidth={1.8} />
-      </a>
-      <a
-        href={`tel:${PHONE}`}
-        className="hidden rounded-full bg-primary px-4 py-2 text-center text-xs font-semibold text-primary-foreground shadow-lift sm:block"
-      >
-        {PHONE_DISPLAY}
       </a>
     </div>
   );
