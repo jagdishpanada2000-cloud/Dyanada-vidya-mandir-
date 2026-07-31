@@ -52,7 +52,6 @@ const translations: Translations = {
 
   "home.stats.founded": { en: "Founded", mr: "स्थापना" },
   "home.stats.students": { en: "Students", mr: "विद्यार्थी" },
-  "home.stats.educators": { en: "Educators", mr: "शिक्षक" },
   "home.stats.results": { en: "Board Results", mr: "बोर्ड निकाल" },
 
   "home.closing": {
@@ -112,9 +111,6 @@ const translations: Translations = {
   "academics.stage3.name": { en: "Secondary", mr: "माध्यमिक" },
   "academics.stage3.grades": { en: "Std. V – X", mr: "इयत्ता ५ – १०" },
   "academics.stage3.text": { en: "State board curriculum with laboratory science, languages and structured assessment.", mr: "प्रयोगशाळा विज्ञान, भाषा आणि संरचित मूल्यांकनासह राज्य मंडळ अभ्यासक्रम." },
-  "academics.stage4.name": { en: "Higher Secondary", mr: "उच्च माध्यमिक" },
-  "academics.stage4.grades": { en: "Std. XI – XII", mr: "इयत्ता ११ – १२" },
-  "academics.stage4.text": { en: "Science, Commerce and Arts streams with focused competitive-exam guidance.", mr: "विज्ञान, वाणिज्य आणि कला शाखा केंद्रित स्पर्धा-परीक्षा मार्गदर्शनासह." },
   "academics.approach1": { en: "Class sizes capped so every student is known by name", mr: "वर्गाची संख्या मर्यादित ठेवली जाते जेणेकरून प्रत्येक विद्यार्थी नावाने ओळखला जाईल" },
   "academics.approach2": { en: "Continuous assessment rather than a single terminal exam", mr: "एकाच अंतिम परीक्षेऐवजी सतत मूल्यांकन" },
   "academics.approach3": { en: "Remedial and enrichment sessions built into the weekly timetable", mr: "साप्ताहिक वेळापत्रकात उपचारात्मक आणि समृद्धी सत्रांचा समावेश" },
@@ -129,7 +125,7 @@ const translations: Translations = {
     mr: "ज्ञानदा विद्या मंदिर पूर्व-प्राथमिक ते उच्च माध्यमिकपर्यंत महाराष्ट्र राज्य मंडळाचा अभ्यासक्रम अनुसरते, शैक्षणिक कठोरता आणि सह-अभ्यासक्रमिक समृद्धी यांचा समतोल साधते.",
   },
   "academics.stages.eyebrow": { en: "Stages", mr: "टप्पे" },
-  "academics.stages.title": { en: "Four stages, one philosophy", mr: "चार टप्पे, एक तत्त्वज्ञान" },
+  "academics.stages.title": { en: "Three stages, one philosophy", mr: "तीन टप्पे, एक तत्त्वज्ञान" },
   "academics.approach.eyebrow": { en: "Our Approach", mr: "आमचा दृष्टिकोन" },
   "academics.approach.title": { en: "Rigour without pressure", mr: "दबावाशिवाय कठोरता" },
   "academics.approach.intro": {
@@ -185,18 +181,12 @@ const translations: Translations = {
 
   /* Facilities */
   "facilities.hero.eyebrow": { en: "Facilities", mr: "सुविधा" },
-  "facilities.f1.title": { en: "Science Laboratories", mr: "विज्ञान प्रयोगशाळा" },
-  "facilities.f1.text": { en: "Separate physics, chemistry and biology labs for senior classes.", mr: "वरिष्ठ वर्गांसाठी स्वतंत्र भौतिकशास्त्र, रसायनशास्त्र आणि जीवशास्त्र प्रयोगशाळा." },
-  "facilities.f2.title": { en: "Computer Centre", mr: "संगणक केंद्र" },
-  "facilities.f2.text": { en: "Sixty workstations with supervised access through the school day.", mr: "शाळेच्या वेळेत पर्यवेक्षित प्रवेशासह साठ संगणक." },
-  "facilities.f3.title": { en: "Library", mr: "ग्रंथालय" },
-  "facilities.f3.text": { en: "Over 14,000 titles in Marathi, Hindi and English with a quiet reading hall.", mr: "मराठी, हिंदी आणि इंग्रजीमध्ये १४,००० हून अधिक पुस्तके शांत वाचन कक्षासह." },
-  "facilities.f4.title": { en: "Sports Ground", mr: "क्रीडांगण" },
-  "facilities.f4.text": { en: "Full-size playing field, kabaddi courts and an indoor games room.", mr: "पूर्ण आकाराचे मैदान, कबड्डी कोर्ट आणि इनडोअर गेम्स रूम." },
-  "facilities.f5.title": { en: "Arts & Music Rooms", mr: "कला आणि संगीत कक्ष" },
-  "facilities.f5.text": { en: "Dedicated spaces for classical music, drama rehearsal and fine art.", mr: "शास्त्रीय संगीत, नाटक सराव आणि चित्रकलेसाठी समर्पित जागा." },
-  "facilities.f6.title": { en: "Green Campus", mr: "हिरवा कॅम्पस" },
-  "facilities.f6.text": { en: "A shaded courtyard, kitchen garden and rainwater harvesting system.", mr: "सावलीचे आवार, स्वयंपाकघर बाग आणि पावसाचे पाणी साठवणूक प्रणाली." },
+  "facilities.f1.title": { en: "ARTS", mr: "कला" },
+  "facilities.f1.text": { en: "Dedicated spaces for fine arts, drawing and creative expression.", mr: "चित्रकला, रेखाटन आणि सर्जनशील अभिव्यक्तीसाठी समर्पित जागा." },
+  "facilities.f2.title": { en: "Sports Ground", mr: "क्रीडांगण" },
+  "facilities.f2.text": { en: "Full-size playing field, kabaddi courts and an indoor games room.", mr: "पूर्ण आकाराचे मैदान, कबड्डी कोर्ट आणि इनडोअर गेम्स रूम." },
+  "facilities.f3.title": { en: "Green Campus", mr: "हिरवा कॅम्पस" },
+  "facilities.f3.text": { en: "A shaded courtyard, kitchen garden and rainwater harvesting system.", mr: "सावलीचे आवार, स्वयंपाकघर बाग आणि पावसाचे पाणी साठवणूक प्रणाली." },
   "facilities.building1": { en: "Main Building", mr: "मुख्य इमारत" },
   "facilities.building2": { en: "Courtyard", mr: "आवार" },
   "facilities.building3": { en: "Auditorium", mr: "सभागृह" },
@@ -296,7 +286,7 @@ const translations: Translations = {
   "alumni.v6.role": { en: "Asst. Manager, Cords Cable Industries", mr: "सहाय्यक व्यवस्थापक, कॉर्ड्स केबल इंडस्ट्रीज" },
   "alumni.v6.quote": { en: "My school is a temple of knowledge. And my school is my second home. The values I received here shaped my personality. The teachers here not only taught me academics but also the art of living. The guidance of teachers and the companionship of friends make every school day special. I learned discipline, hard work and unity here. My school always inspires me and gives me strength to move forward. After stepping into the outside world, I realised that the joy of playing in the school grounds and studying in the classroom is unmatched. My school and teachers have a huge share in my success. I am very proud of my school.", mr: "माझी शाळा ही ज्ञानाचं मंदिर आहे. आणि माझी शाळा म्हणजे माझं दुसरं घर आहे. येथे मिळालेल्या संस्कारांमुळे माझं व्यक्तिमत्व घडलं. इथल्या शिक्षकांनी मला फक्त अभ्यासच नाही तर जगण्याची कला शिकवली. शिक्षकांचे मार्गदर्शन आणि मित्रांची साथ यामुळे शाळेतील प्रत्येक दिवस खास बनतो. शिस्त, परिश्रम आणि एकता याची शिकवण मला इथेच मिळाली. माझी शाळा मला नेहमीच प्रेरणा देते आणि पुढे जाण्यासाठी बळ देते. बाहेरच्या जगात पाऊल टाकल्यावर समजले की शाळेच्या पटांगणात खेळताना आणि वर्गात शिकताना जे आनंद मिळतो तो कुठेही मिळणार नाही. माझ्या यशामागे माझ्या शाळेचा आणि शिक्षकांचा मोठा वाटा आहे. मला माझ्या शाळेचा खूप अभिमान आहे." },
   "alumni.reunion": { en: "Alumni Reunion", mr: "माजी विद्यार्थी पुनर्मिलन" },
-  "alumni.email": { en: "alumni@dnyanadavm.edu.in", mr: "alumni@dnyanadavm.edu.in" },
+  "alumni.email": { en: "dnyanadavidyamandir1975@gmail.com", mr: "dnyanadavidyamandir1975@gmail.com" },
   "alumni.hero.title": {
     en: "Once a Dnyanadan, always a Dnyanadan",
     mr: "एकदा ज्ञानदाचे, तर नेहमी ज्ञानदाचे",
@@ -320,6 +310,10 @@ const translations: Translations = {
     en: "Write to the alumni office",
     mr: "माजी विद्यार्थी कार्यालयाला लिहा",
   },
+  "alumni.connect.feedback": {
+    en: "Share your feedback",
+    mr: "तुमचा अभिप्राय सामायिक करा",
+  },
 
   /* Contact */
   "contact.hero.eyebrow": { en: "Contact", mr: "संपर्क" },
@@ -340,6 +334,7 @@ const translations: Translations = {
   "contact.form.message": { en: "Message", mr: "संदेश" },
   "contact.form.submit": { en: "Send message", mr: "संदेश पाठवा" },
   "contact.viewMap": { en: "Open in Google Maps", mr: "गूगल नकाशात उघडा" },
+  "contact.hours": { en: "Monday to Saturday, 7:00 am – 5:30 pm", mr: "सोमवार ते शनिवार, सकाळी ७:०० – सायंकाळी ५:३०" },
 };
 
 interface LanguageContextType {

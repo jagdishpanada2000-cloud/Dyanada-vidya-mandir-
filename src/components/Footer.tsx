@@ -53,15 +53,17 @@ export function Footer() {
           <ul className="mt-5 space-y-3.5 text-sm text-primary-foreground/75">
             <li className="flex gap-3">
               <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold" strokeWidth={1.6} />
-              उल्हासनगर-४, ठाणे, महाराष्ट्र
+              <span>
+                मनेरेगाव रोड, सेक्शन २५, कृष्ण मार्बल जवळ, उल्हासनगर, जिल्हा ठाणे, पिन कोड - ४२१००४
+              </span>
             </li>
             <li className="flex gap-3">
               <Phone className="mt-0.5 h-4 w-4 shrink-0 text-gold" strokeWidth={1.6} />
-              +91 251 XXX XXXX
+              +91 92726 98531
             </li>
             <li className="flex gap-3">
               <Mail className="mt-0.5 h-4 w-4 shrink-0 text-gold" strokeWidth={1.6} />
-              info@dnyanadavm.edu.in
+              dnyanadavidyamandir1975@gmail.com
             </li>
           </ul>
         </div>

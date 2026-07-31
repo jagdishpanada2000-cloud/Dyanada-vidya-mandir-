@@ -7,11 +7,23 @@ import { PageHero, Reveal, Section } from "@/components/Section";
 export default function Contact() {
   const { t } = useLanguage();
 
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    const name = String(data.get("name") || "");
+    const email = String(data.get("email") || "");
+    const subject = String(data.get("subject") || "");
+    const message = String(data.get("message") || "");
+    const body = `${message}\n\n— ${name}\n${email}`;
+    window.location.href = `mailto:dnyanadavidyamandir1975@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  };
+
   const details = [
-    { icon: MapPin, label: t("contact.detail1.label"), value: "उल्हासनगर-४, ठाणे, महाराष्ट्र" },
-    { icon: Phone, label: t("contact.detail2.label"), value: "+91 251 XXX XXXX" },
-    { icon: Mail, label: t("contact.detail3.label"), value: "info@dnyanadavm.edu.in" },
-    { icon: Clock, label: t("contact.detail4.label"), value: "Monday to Saturday, 8:00 am – 2:30 pm" },
+    { icon: MapPin, label: t("contact.detail1.label"), value: "मनेरेगाव रोड, सेक्शन २५, कृष्ण मार्बल जवळ, उल्हासनगर, जिल्हा ठाणे, पिन कोड - ४२१००४" },
+    { icon: Phone, label: t("contact.detail2.label"), value: "+91 92726 98531" },
+    { icon: Mail, label: t("contact.detail3.label"), value: "dnyanadavidyamandir1975@gmail.com" },
+    { icon: Clock, label: t("contact.detail4.label"), value: t("contact.hours") },
   ];
 
   return (
@@ -43,9 +55,7 @@ export default function Contact() {
           <Reveal delay={0.1}>
             <form
               className="card-elegant p-8"
-              onSubmit={(e) => {
-                e.preventDefault();
-              }}
+              onSubmit={handleSubmit}
             >
               <h2 className="font-display text-2xl font-semibold">{t("contact.form.title")}</h2>
               <div className="rule-gold mt-4" />
@@ -64,7 +74,9 @@ export default function Contact() {
                     </label>
                     <input
                       id={f.id}
+                      name={f.id}
                       type={f.type}
+                      required
                       className="mt-2 w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none transition-colors focus:border-gold"
                     />
                   </div>
@@ -78,7 +90,9 @@ export default function Contact() {
                   </label>
                   <textarea
                     id="message"
+                    name="message"
                     rows={5}
+                    required
                     className="mt-2 w-full resize-none rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none transition-colors focus:border-gold"
                   />
                 </div>

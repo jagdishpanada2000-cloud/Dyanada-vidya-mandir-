@@ -65,12 +65,22 @@ export default function Alumni() {
               intro={t("alumni.connect.intro")}
             />
             <Reveal delay={0.1}>
-              <a
-                href={`mailto:${t("alumni.email")}`}
-                className="mt-8 inline-flex items-center rounded-xl bg-primary px-6 py-3.5 text-sm font-medium text-primary-foreground shadow-soft transition-all hover:shadow-lift"
-              >
-                {t("alumni.connect.cta")}
-              </a>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <a
+                  href={`mailto:${t("alumni.email")}`}
+                  className="inline-flex items-center rounded-xl bg-primary px-6 py-3.5 text-sm font-medium text-primary-foreground shadow-soft transition-all hover:shadow-lift"
+                >
+                  {t("alumni.connect.cta")}
+                </a>
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSfhV3fh7iDxtp0Jcj8q2yZCwM9Sf6g-JurNGK4_JpYv8O4Naw/viewform?usp=sharing&ouid=102128050377368930988"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center rounded-xl border border-gold bg-gold/10 px-6 py-3.5 text-sm font-medium text-primary transition-colors hover:bg-gold/20"
+                >
+                  {t("alumni.connect.feedback")}
+                </a>
+              </div>
             </Reveal>
           </div>
         </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { BookMarked, Dumbbell, FlaskConical, Laptop, Music, Trees } from "lucide-react";
+import { Palette, Dumbbell, Trees } from "lucide-react";
 import { useLanguage } from "@/lib/language";
 import { PageHero, Reveal, Section, SectionHeading } from "@/components/Section";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
@@ -9,12 +9,9 @@ export default function Facilities() {
   const { t } = useLanguage();
 
   const facilities = [
-    { icon: FlaskConical, title: t("facilities.f1.title"), text: t("facilities.f1.text") },
-    { icon: Laptop, title: t("facilities.f2.title"), text: t("facilities.f2.text") },
-    { icon: BookMarked, title: t("facilities.f3.title"), text: t("facilities.f3.text") },
-    { icon: Dumbbell, title: t("facilities.f4.title"), text: t("facilities.f4.text") },
-    { icon: Music, title: t("facilities.f5.title"), text: t("facilities.f5.text") },
-    { icon: Trees, title: t("facilities.f6.title"), text: t("facilities.f6.text") },
+    { icon: Palette, title: t("facilities.f1.title"), text: t("facilities.f1.text") },
+    { icon: Dumbbell, title: t("facilities.f2.title"), text: t("facilities.f2.text") },
+    { icon: Trees, title: t("facilities.f3.title"), text: t("facilities.f3.text") },
   ];
 
   const buildingLabels = [t("facilities.building1"), t("facilities.building2"), t("facilities.building3")];

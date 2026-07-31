@@ -11,7 +11,6 @@ export default function Academics() {
     { name: t("academics.stage1.name"), grades: t("academics.stage1.grades"), text: t("academics.stage1.text") },
     { name: t("academics.stage2.name"), grades: t("academics.stage2.grades"), text: t("academics.stage2.text") },
     { name: t("academics.stage3.name"), grades: t("academics.stage3.grades"), text: t("academics.stage3.text") },
-    { name: t("academics.stage4.name"), grades: t("academics.stage4.grades"), text: t("academics.stage4.text") },
   ];
 
   const approach = [
@@ -30,14 +29,14 @@ export default function Academics() {
       />
 
       <Section>
-        <SectionHeading eyebrow={t("academics.stages.eyebrow")} title={t("academics.stages.title")} />
-        <div className="mt-14 grid gap-6 sm:grid-cols-2">
+        <SectionHeading eyebrow={t("academics.stages.eyebrow")} title={t("academics.stages.title")} center />
+        <div className="mt-14 grid gap-6 sm:grid-cols-3">
           {stages.map((s, i) => (
             <Reveal key={s.name} delay={i * 0.07}>
-              <article className="card-elegant h-full p-8">
+              <article className="card-elegant h-full p-8 text-center">
                 <span className="eyebrow">{s.grades}</span>
                 <h3 className="mt-3 font-display text-2xl font-semibold">{s.name}</h3>
-                <div className="rule-gold mt-4" />
+                <div className="rule-gold mx-auto mt-4" />
                 <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{s.text}</p>
               </article>
             </Reveal>

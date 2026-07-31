@@ -39,9 +39,8 @@ export default function Home() {
 
   const stats = [
     { value: "1975", label: t("home.stats.founded") },
-    { value: "1,200+", label: t("home.stats.students") },
-    { value: "80+", label: t("home.stats.educators") },
-    { value: "96%", label: t("home.stats.results") },
+    { value: "250", label: t("home.stats.students") },
+    { value: "77%", label: t("home.stats.results") },
   ];
 
   const values = coreValueData;
@@ -107,7 +106,7 @@ export default function Home() {
       </section>
 
       <section className="border-b border-border bg-beige">
-        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-y-10 px-5 py-14 lg:grid-cols-4 lg:px-8">
+        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-y-10 px-5 py-14 sm:grid-cols-3 lg:grid-cols-3 lg:px-8">
           {stats.map((s, i) => (
             <Reveal key={s.label} delay={i * 0.07} className="text-center">
               <div className="font-display text-4xl font-semibold text-primary sm:text-5xl">
