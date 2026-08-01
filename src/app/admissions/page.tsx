@@ -1,9 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import { useLanguage } from "@/lib/language";
 import { PageHero, Reveal, Section, SectionHeading } from "@/components/Section";
-import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 
 export default function Admissions() {
   const { t } = useLanguage();
@@ -62,32 +60,6 @@ export default function Admissions() {
             </Reveal>
           ))}
         </ul>
-      </Section>
-      <div className="flex justify-center py-8">
-        <img src="https://res.cloudinary.com/dwta5v9wi/image/upload/v1785330324/copy_of_section_end_uqkgou.png" alt="" className="h-5 opacity-40 sm:h-10" />
-      </div>
-
-      <Section>
-        <div className="grid gap-14 lg:grid-cols-2 lg:items-center">
-          <Reveal>
-            <ImagePlaceholder label={t("admissions.office")} ratio="4/3" />
-          </Reveal>
-          <div>
-            <SectionHeading
-              eyebrow={t("admissions.visit.eyebrow")}
-              title={t("admissions.visit.title")}
-              intro={t("admissions.visit.intro")}
-            />
-            <Reveal delay={0.1}>
-              <Link
-                href="/contact"
-                className="mt-8 inline-flex items-center rounded-xl bg-primary px-6 py-3.5 text-sm font-medium text-primary-foreground shadow-soft transition-all hover:shadow-lift"
-              >
-                {t("admissions.visit.cta")}
-              </Link>
-            </Reveal>
-          </div>
-        </div>
       </Section>
     </>
   );
