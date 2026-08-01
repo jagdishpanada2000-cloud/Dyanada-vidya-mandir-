@@ -40,6 +40,8 @@ const campusImages = [
   "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785327267/WhatsApp_Image_2026-07-27_at_11.59.01_PM_evg5qz.jpg",
   "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785327272/WhatsApp_Image_2026-07-27_at_11.59.06_PM_kdrhxc.jpg",
   "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785327257/WhatsApp_Image_2026-07-27_at_11.58.50_PM_1_gmcg77.jpg",
+  "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785327258/WhatsApp_Image_2026-07-27_at_11.58.52_PM_2_ndkyrr.jpg",
+  "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785327276/WhatsApp_Image_2026-07-27_at_11.59.11_PM_d2wjtf.jpg",
 ];
 
 const cultureImages = [
