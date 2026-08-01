@@ -12,7 +12,7 @@ export default function About() {
         eyebrow="About Us | आमच्याबद्दल"
         title={t("home.hero.title")}
         intro={t("about.history.p1")}
-        titleClassName={language === "en" ? "xl:whitespace-nowrap" : undefined}
+        titleClassName="xl:whitespace-nowrap"
       />
 
       <Section>
