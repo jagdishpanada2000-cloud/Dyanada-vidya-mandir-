@@ -45,16 +45,20 @@ export function SectionHeading({
   title,
   intro,
   center = false,
+  titleClassName,
+  wrapperClassName,
 }: {
   eyebrow: string;
   title: string;
   intro?: string;
   center?: boolean;
+  titleClassName?: string;
+  wrapperClassName?: string;
 }) {
   return (
-    <Reveal className={cn("max-w-2xl", center && "mx-auto text-center")}>
+    <Reveal className={cn("max-w-2xl", center && "mx-auto text-center", wrapperClassName)}>
       <span className="eyebrow">{eyebrow}</span>
-      <h2 className="mt-3 font-display text-3xl leading-tight font-semibold sm:text-4xl">
+      <h2 className={cn("mt-3 font-display text-3xl leading-tight font-semibold sm:text-4xl", titleClassName)}>
         {title}
       </h2>
       <div className={cn("rule-gold mt-5", center && "mx-auto")} />

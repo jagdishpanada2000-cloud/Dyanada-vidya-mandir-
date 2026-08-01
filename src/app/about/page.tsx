@@ -17,7 +17,7 @@ export default function About() {
       <Section>
         <SectionHeading
           eyebrow="Brief History of the School"
-          title="शाळेचा संक्षिप्त इतिहास"
+          title={t("about.history.title")}
           intro={t("about.history.p2")}
         />
         <Reveal delay={0.08}>
@@ -39,6 +39,8 @@ export default function About() {
         <SectionHeading
           eyebrow={language === "en" ? "School Motto / Tagline" : "शाळेचे ब्रीदवाक्य"}
           title={t("home.hero.tagline")}
+          titleClassName={language === "en" ? "lg:whitespace-nowrap" : undefined}
+          wrapperClassName="lg:max-w-none"
           center
         />
       </Section>

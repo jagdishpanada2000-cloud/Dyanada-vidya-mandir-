@@ -60,6 +60,7 @@ const translations: Translations = {
   },
 
   /* About – History (verbatim) */
+  "about.history.title": { en: "A Brief History of the School", mr: "शाळेचा संक्षिप्त इतिहास" },
   "about.history.p1": {
     en: "Dnyanada Vidya Mandir, Ulhasnagar-4 was established in 1975. The school's academic journey began through Priyadarshini Shikshan Prasarak Mandal. The institution was founded with the noble goal of providing students with knowledge, values and excellent moral grounding through education, and fostering their holistic development.",
     mr: "ज्ञानदा विद्या मंदिर, उल्हासनगर-४ या शाळेची स्थापना सन १९७५ मध्ये झाली. शाळेची शैक्षणिक वाटचाल प्रियदर्शनी शिक्षण प्रसारक मंडळ या संस्थेच्या माध्यमातून सुरू झाली. शिक्षणाच्या माध्यमातून समाजातील विद्यार्थ्यांना ज्ञान, संस्कार आणि उत्तम मूल्यांची शिदोरी देऊन त्यांचा सर्वांगीण विकास घडवून आणणे, या उदात्त ध्येयाने संस्थेची स्थापना करण्यात आली.",
@@ -286,7 +287,7 @@ const translations: Translations = {
   "alumni.v6.batch": { en: "Batch of 2012", mr: "२०१२ चा बॅच" },
   "alumni.v6.role": { en: "Asst. Manager, Cords Cable Industries", mr: "सहाय्यक व्यवस्थापक, कॉर्ड्स केबल इंडस्ट्रीज" },
   "alumni.v6.quote": { en: "My school is a temple of knowledge. And my school is my second home. The values I received here shaped my personality. The teachers here not only taught me academics but also the art of living. The guidance of teachers and the companionship of friends make every school day special. I learned discipline, hard work and unity here. My school always inspires me and gives me strength to move forward. After stepping into the outside world, I realised that the joy of playing in the school grounds and studying in the classroom is unmatched. My school and teachers have a huge share in my success. I am very proud of my school.", mr: "माझी शाळा ही ज्ञानाचं मंदिर आहे. आणि माझी शाळा म्हणजे माझं दुसरं घर आहे. येथे मिळालेल्या संस्कारांमुळे माझं व्यक्तिमत्व घडलं. इथल्या शिक्षकांनी मला फक्त अभ्यासच नाही तर जगण्याची कला शिकवली. शिक्षकांचे मार्गदर्शन आणि मित्रांची साथ यामुळे शाळेतील प्रत्येक दिवस खास बनतो. शिस्त, परिश्रम आणि एकता याची शिकवण मला इथेच मिळाली. माझी शाळा मला नेहमीच प्रेरणा देते आणि पुढे जाण्यासाठी बळ देते. बाहेरच्या जगात पाऊल टाकल्यावर समजले की शाळेच्या पटांगणात खेळताना आणि वर्गात शिकताना जे आनंद मिळतो तो कुठेही मिळणार नाही. माझ्या यशामागे माझ्या शाळेचा आणि शिक्षकांचा मोठा वाटा आहे. मला माझ्या शाळेचा खूप अभिमान आहे." },
-  "alumni.reunion": { en: "Alumni Reunion", mr: "माजी विद्यार्थी पुनर्मिलन" },
+  "alumni.reunion": { en: "Student Reunion", mr: "विद्यार्थी पुनर्मिलन" },
   "alumni.email": { en: "dnyanadavidyamandir1975@gmail.com", mr: "dnyanadavidyamandir1975@gmail.com" },
   "alumni.hero.title": {
     en: "Once a Dnyanadan, always a Dnyanadan",

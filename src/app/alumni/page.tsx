@@ -4,7 +4,6 @@ import { Quote } from "lucide-react";
 import Image from "next/image";
 import { useLanguage } from "@/lib/language";
 import { PageHero, Reveal, Section, SectionHeading } from "@/components/Section";
-import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 
 const voiceKeys = [
   { nameKey: "alumni.v1.name", batchKey: "alumni.v1.batch", roleKey: "alumni.v1.role", quoteKey: "alumni.v1.quote", img: "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785253869/Rahul_Sonawane_rvtisp.jpg" },
@@ -48,6 +47,16 @@ export default function Alumni() {
             </Reveal>
           ))}
         </div>
+        <Reveal delay={0.2} className="mt-12 flex justify-center">
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfhV3fh7iDxtp0Jcj8q2yZCwM9Sf6g-JurNGK4_JpYv8O4Naw/viewform?usp=sharing&ouid=102128050377368930988"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center rounded-xl border border-gold bg-gold/10 px-8 py-4 text-base font-medium text-primary transition-colors hover:bg-gold/20"
+          >
+            {t("alumni.connect.feedback")}
+          </a>
+        </Reveal>
       </Section>
       <div className="flex justify-center py-8">
         <img src="https://res.cloudinary.com/dwta5v9wi/image/upload/v1785330324/copy_of_section_end_uqkgou.png" alt="" className="h-5 opacity-40 sm:h-10" />
@@ -56,14 +65,23 @@ export default function Alumni() {
       <Section alt>
         <div className="grid gap-14 lg:grid-cols-2 lg:items-center">
           <Reveal>
-            <ImagePlaceholder label={t("alumni.reunion")} ratio="4/3" />
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-soft">
+              <Image
+                src="https://res.cloudinary.com/dwta5v9wi/image/upload/v1785557303/reunion_filwwi.png"
+                alt={t("alumni.reunion")}
+                fill
+                className="object-cover"
+                sizes="(min-width: 1024px) 50vw, 100vw"
+              />
+            </div>
           </Reveal>
           <div>
-            <SectionHeading
-              eyebrow={t("alumni.connect.eyebrow")}
-              title={t("alumni.connect.title")}
-              intro={t("alumni.connect.intro")}
-            />
+            <Reveal>
+              <h2 className="font-display text-4xl leading-tight font-semibold sm:text-5xl">
+                {t("alumni.reunion")}
+              </h2>
+              <div className="rule-gold mt-5" />
+            </Reveal>
             <Reveal delay={0.1}>
               <div className="mt-8 flex flex-wrap gap-3">
                 <a
@@ -71,14 +89,6 @@ export default function Alumni() {
                   className="inline-flex items-center rounded-xl bg-primary px-6 py-3.5 text-sm font-medium text-primary-foreground shadow-soft transition-all hover:shadow-lift"
                 >
                   {t("alumni.connect.cta")}
-                </a>
-                <a
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSfhV3fh7iDxtp0Jcj8q2yZCwM9Sf6g-JurNGK4_JpYv8O4Naw/viewform?usp=sharing&ouid=102128050377368930988"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center rounded-xl border border-gold bg-gold/10 px-6 py-3.5 text-sm font-medium text-primary transition-colors hover:bg-gold/20"
-                >
-                  {t("alumni.connect.feedback")}
                 </a>
               </div>
             </Reveal>
