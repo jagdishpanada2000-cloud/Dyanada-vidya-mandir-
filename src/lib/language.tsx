@@ -212,6 +212,7 @@ const translations: Translations = {
   "gallery.filter3": { en: "Events", mr: "कार्यक्रम" },
   "gallery.filter4": { en: "Sport", mr: "क्रीडा" },
   "gallery.filter5": { en: "Culture", mr: "संस्कृती" },
+  "gallery.filterCulture": { en: "Events & Culture", mr: "कार्यक्रम आणि संस्कृती" },
   "gallery.item1": { en: "Main Gate", mr: "मुख्य दरवाजा" },
   "gallery.item2": { en: "Annual Day", mr: "वार्षिक दिन" },
   "gallery.item3": { en: "Athletics Meet", mr: "अॅथलेटिक्स स्पर्धा" },

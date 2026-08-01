@@ -5,14 +5,13 @@ import { useLanguage } from "@/lib/language";
 import { PageHero, Reveal, Section } from "@/components/Section";
 import { cn } from "@/lib/utils";
 
-type Category = "All" | "Campus" | "Events" | "Sport" | "Culture";
+type Category = "All" | "Campus" | "Sport" | "Culture";
 
 const filters: { key: Category; labelKey: string }[] = [
   { key: "All", labelKey: "gallery.filter1" },
   { key: "Campus", labelKey: "gallery.filter2" },
-  { key: "Events", labelKey: "gallery.filter3" },
+  { key: "Culture", labelKey: "gallery.filterCulture" },
   { key: "Sport", labelKey: "gallery.filter4" },
-  { key: "Culture", labelKey: "gallery.filter5" },
 ];
 
 const sportImages = [
@@ -38,7 +37,14 @@ const otherImages = [
   "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785327271/WhatsApp_Image_2026-07-27_at_11.59.05_PM_2_p1xgwu.jpg",
 ];
 
-const otherCategories: Category[] = ["Campus", "Events", "Culture"];
+const cultureImages = [
+  "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785553783/2_aixckg.png",
+  "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785553775/4_rkxlaz.png",
+  "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785553773/1_rjkawi.png",
+  "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785553772/3_pdwawt.png",
+];
+
+const otherCategories: Category[] = ["Campus", "Culture"];
 
 const items = [
   ...sportImages.map((src, i) => ({
@@ -50,6 +56,11 @@ const items = [
     src,
     category: otherCategories[i % otherCategories.length],
     ratio: (i % 3 === 0 ? "3/4" : "4/3") as "4/3" | "3/4",
+  })),
+  ...cultureImages.map((src, i) => ({
+    src,
+    category: "Culture" as Category,
+    ratio: (i % 2 === 0 ? "3/4" : "4/3") as "4/3" | "3/4",
   })),
 ];
 
