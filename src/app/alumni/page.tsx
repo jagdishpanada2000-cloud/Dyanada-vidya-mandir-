@@ -29,7 +29,7 @@ export default function Alumni() {
         <SectionHeading eyebrow={t("alumni.voices.eyebrow")} title={t("alumni.voices.title")} />
         <div className="mt-14 grid gap-6 lg:grid-cols-3">
           {voiceKeys.map((v, i) => (
-            <Reveal key={v.nameKey} delay={i * 0.08}>
+            <Reveal key={v.nameKey} delay={i * 0.08} className="min-w-0">
               <article className="card-elegant flex h-full flex-col p-8">
                 <Quote className="h-6 w-6 text-gold" strokeWidth={1.3} />
                 <p className="mt-5 flex-1 font-display text-xl leading-snug text-foreground">
