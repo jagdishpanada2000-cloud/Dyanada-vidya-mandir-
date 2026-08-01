@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, BookOpen, Heart, Scale, Shield, Handshake, Users, Lightbulb, HeartHandshake, Globe, Flag } from "lucide-react";
@@ -94,7 +95,14 @@ export default function Home() {
             transition={{ duration: 0.9, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
             className="relative"
           >
-            <img src="https://res.cloudinary.com/dwta5v9wi/image/upload/v1785325733/1_ayyjy1.jpg" alt="Dnyanada Vidya Mandir Campus" className="h-full w-full rounded-2xl object-cover shadow-lift" />
+            <Image
+              src="https://res.cloudinary.com/dwta5v9wi/image/upload/v1785325733/1_ayyjy1.jpg"
+              alt="Dnyanada Vidya Mandir Campus"
+              className="h-full w-full rounded-2xl object-cover shadow-lift"
+              priority
+              width={800}
+              height={600}
+            />
             <div className="absolute -bottom-6 -left-6 hidden w-56 rounded-2xl border border-border bg-surface/80 p-5 shadow-soft backdrop-blur-md sm:block">
               <span className="font-display text-3xl font-semibold text-primary">{language === "mr" ? toMarathiNum("50+") : "50+"}</span>
               <p className="mt-1 text-xs tracking-[0.16em] uppercase text-muted-foreground">

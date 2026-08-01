@@ -112,7 +112,7 @@ export default function Gallery() {
             <Reveal key={i} delay={(i % 6) * 0.05} className="break-inside-avoid">
               <img
                 src={item.src}
-                alt=""
+                alt={item.category}
                 className="w-full rounded-2xl object-cover"
                 style={{ aspectRatio: item.ratio }}
               />
