@@ -5,6 +5,35 @@
 @source "../hooks";
 @import "tw-animate-css";
 
+@font-face {
+  font-family: "Noto Sans Devanagari";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/NotoSansDevanagari-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Noto Sans Devanagari";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/NotoSansDevanagari-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Noto Sans Devanagari";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/NotoSansDevanagari-SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Noto Sans Devanagari";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/NotoSansDevanagari-Bold.ttf") format("truetype");
+}
+
 @custom-variant dark (&:is(.dark *));
 
 /*
@@ -60,9 +89,9 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
-  --font-display: "Cormorant Garamond", "Noto Sans Devanagari", "Nirmala UI", "Kohinoor Devanagari", Georgia, serif;
-  --font-sans: "Karla", "Noto Sans Devanagari", "Nirmala UI", "Kohinoor Devanagari", ui-sans-serif, system-ui, sans-serif;
-  --font-devanagari: "Noto Sans Devanagari", "Nirmala UI", "Kohinoor Devanagari", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Cormorant Garamond", local("Noto Sans Devanagari"), "Nirmala UI", "Kohinoor Devanagari", Georgia, serif;
+  --font-sans: "Karla", local("Noto Sans Devanagari"), "Nirmala UI", "Kohinoor Devanagari", ui-sans-serif, system-ui, sans-serif;
+  --font-devanagari: local("Noto Sans Devanagari"), "Nirmala UI", "Kohinoor Devanagari", ui-sans-serif, system-ui, sans-serif;
 
   --shadow-soft: 0 1px 2px oklch(0.35 0.06 40 / 0.04), 0 8px 24px oklch(0.35 0.06 40 / 0.06);
   --shadow-lift: 0 2px 4px oklch(0.35 0.06 40 / 0.05), 0 18px 44px oklch(0.35 0.06 40 / 0.12);
