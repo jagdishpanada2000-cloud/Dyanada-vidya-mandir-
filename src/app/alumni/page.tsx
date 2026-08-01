@@ -12,6 +12,7 @@ const voiceKeys = [
   { nameKey: "alumni.v4.name", batchKey: "alumni.v4.batch", roleKey: "alumni.v4.role", quoteKey: "alumni.v4.quote", img: "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785253868/Jyotsna_Suralkar_cx6zeb.jpg" },
   { nameKey: "alumni.v5.name", batchKey: "alumni.v5.batch", roleKey: "alumni.v5.role", quoteKey: "alumni.v5.quote", img: "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785253871/Rakesh_Shinde_mwpbit.jpg" },
   { nameKey: "alumni.v6.name", batchKey: "alumni.v6.batch", roleKey: "alumni.v6.role", quoteKey: "alumni.v6.quote", img: "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785253870/Sopan_Avhad_wtacjv.jpg" },
+  { nameKey: "alumni.v7.name", batchKey: "alumni.v7.batch", roleKey: "alumni.v7.role", quoteKey: "alumni.v7.quote", img: "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785560836/WhatsApp_Image_2026-08-01_at_10.35.55_AM_qorygu.jpg" },
 ];
 
 export default function Alumni() {
