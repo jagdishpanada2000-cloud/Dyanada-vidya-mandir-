@@ -45,20 +45,16 @@ export function SectionHeading({
   title,
   intro,
   center = false,
-  titleClassName,
-  wrapperClassName,
 }: {
   eyebrow: string;
   title: string;
   intro?: string;
   center?: boolean;
-  titleClassName?: string;
-  wrapperClassName?: string;
 }) {
   return (
-    <Reveal className={cn("max-w-2xl", center && "mx-auto text-center", wrapperClassName)}>
+    <Reveal className={cn("max-w-2xl", center && "mx-auto text-center")}>
       <span className="eyebrow">{eyebrow}</span>
-      <h2 className={cn("mt-3 font-display text-3xl leading-tight font-semibold sm:text-4xl", titleClassName)}>
+      <h2 className="mt-3 font-display text-3xl leading-tight font-semibold sm:text-4xl">
         {title}
       </h2>
       <div className={cn("rule-gold mt-5", center && "mx-auto")} />
@@ -73,17 +69,19 @@ export function PageHero({
   eyebrow,
   title,
   intro,
+  titleClassName,
 }: {
   eyebrow: string;
   title: string;
   intro: string;
+  titleClassName?: string;
 }) {
   return (
     <section className="border-b border-border bg-beige">
       <div className="mx-auto max-w-7xl px-5 py-20 sm:py-28 lg:px-8">
         <Reveal className="max-w-3xl">
           <span className="eyebrow">{eyebrow}</span>
-          <h1 className="mt-4 font-display text-4xl leading-[1.05] font-semibold sm:text-6xl">
+          <h1 className={cn("mt-4 font-display text-4xl leading-[1.05] font-semibold sm:text-6xl", titleClassName)}>
             {title}
           </h1>
           <div className="rule-gold mt-6" />

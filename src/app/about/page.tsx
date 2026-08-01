@@ -12,6 +12,7 @@ export default function About() {
         eyebrow="About Us | आमच्याबद्दल"
         title={t("home.hero.title")}
         intro={t("about.history.p1")}
+        titleClassName={language === "en" ? "xl:whitespace-nowrap" : undefined}
       />
 
       <Section>
@@ -39,8 +40,6 @@ export default function About() {
         <SectionHeading
           eyebrow={language === "en" ? "School Motto / Tagline" : "शाळेचे ब्रीदवाक्य"}
           title={t("home.hero.tagline")}
-          titleClassName={language === "en" ? "lg:whitespace-nowrap" : undefined}
-          wrapperClassName="lg:max-w-none"
           center
         />
       </Section>

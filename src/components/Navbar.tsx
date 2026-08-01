@@ -152,21 +152,28 @@ export function Navbar() {
               </div>
             </div>
             <nav className="flex min-h-0 flex-1 flex-col gap-1 overflow-y-auto px-5 pb-6 sm:pb-10">
-              {navLinks.map((link, i) => (
-                <motion.div
-                  key={link.to}
-                  initial={{ opacity: 0, y: 12 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.08 + i * 0.035 }}
-                >
-                  <Link
-                    href={link.to}
-                    className="block border-b border-border/70 py-3 text-xl sm:py-4 sm:text-2xl font-display text-primary"
+              {navLinks.map((link, i) => {
+                const active =
+                  link.to === "/" ? pathname === "/" : pathname.startsWith(link.to);
+                return (
+                  <motion.div
+                    key={link.to}
+                    initial={{ opacity: 0, y: 12 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.08 + i * 0.035 }}
                   >
-                    {t(navKey[link.to])}
-                  </Link>
-                </motion.div>
-              ))}
+                    <Link
+                      href={link.to}
+                      className={cn(
+                        "block border-b border-border/70 px-4 py-3 text-xl sm:text-2xl font-display text-primary",
+                        active && "rounded-xl bg-primary text-primary-foreground",
+                      )}
+                    >
+                      {t(navKey[link.to])}
+                    </Link>
+                  </motion.div>
+                );
+              })}
             </nav>
           </motion.div>
         )}

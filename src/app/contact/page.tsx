@@ -115,15 +115,17 @@ export default function Contact() {
         <Reveal>
           <div className="overflow-hidden rounded-2xl shadow-soft">
             <iframe
-              src="https://maps.google.com/maps?q=19.2069162,73.1580918&z=17&output=embed"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.76!2d73.1554675!3d19.2070663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7945e2dc2d085%3A0x53676eff1b9fbcfb!2sDnyanada%20Vidya%20Mandir!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
               width="100%"
               height="450"
               style={{ border: 0, display: "block" }}
               allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
               title="Dnyanada Vidya Mandir Location"
             />
             <a
-              href="https://www.google.com/maps/place/Dnyanada+Vidya+Mandir/@19.2069162,73.1580918,17z"
+              href="https://www.google.com/maps/place/Dnyanada+Vidya+Mandir/@19.2070663,73.1554675,16.55z/data=!4m6!3m5!1s0x3be7945e2dc2d085:0x53676eff1b9fbcfb!8m2!3d19.2069162!4d73.1580918!16s%2Fg%2F1hm4zdf8h?entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 bg-primary px-4 py-3 text-center text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
