@@ -20,6 +20,8 @@ const sportImages = [
   "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785326265/4_zkgbso.jpg",
   "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785327256/WhatsApp_Image_2026-07-27_at_11.58.48_PM_wgxnqk.jpg",
   "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785327256/WhatsApp_Image_2026-07-27_at_11.58.48_PM_1_xwjuef.jpg",
+  "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785327274/WhatsApp_Image_2026-07-27_at_11.59.09_PM_2_yhimdw.jpg",
+  "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785327265/WhatsApp_Image_2026-07-27_at_11.58.59_PM_1_gsjaqc.jpg",
 ];
 
 const otherImages = [
@@ -32,9 +34,12 @@ const otherImages = [
   "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785327266/WhatsApp_Image_2026-07-27_at_11.58.59_PM_ctzg97.jpg",
   "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785327267/WhatsApp_Image_2026-07-27_at_11.59.01_PM_evg5qz.jpg",
   "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785327273/WhatsApp_Image_2026-07-27_at_11.59.07_PM_ik7nl1.jpg",
-  "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785327274/WhatsApp_Image_2026-07-27_at_11.59.09_PM_2_yhimdw.jpg",
   "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785327272/WhatsApp_Image_2026-07-27_at_11.59.06_PM_kdrhxc.jpg",
   "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785327271/WhatsApp_Image_2026-07-27_at_11.59.05_PM_2_p1xgwu.jpg",
+];
+
+const campusImages = [
+  "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785327267/WhatsApp_Image_2026-07-27_at_11.59.00_PM_xzb6ib.jpg",
 ];
 
 const cultureImages = [
@@ -56,6 +61,11 @@ const items = [
     src,
     category: otherCategories[i % otherCategories.length],
     ratio: (i % 3 === 0 ? "3/4" : "4/3") as "4/3" | "3/4",
+  })),
+  ...campusImages.map((src, i) => ({
+    src,
+    category: "Campus" as Category,
+    ratio: (i % 2 === 0 ? "3/4" : "4/3") as "4/3" | "3/4",
   })),
   ...cultureImages.map((src, i) => ({
     src,
