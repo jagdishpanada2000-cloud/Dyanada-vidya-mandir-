@@ -2,7 +2,6 @@
 
 import { useLanguage } from "@/lib/language";
 import { PageHero, Reveal, Section, SectionHeading } from "@/components/Section";
-import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 
 export default function Academics() {
   const { t } = useLanguage();
@@ -67,7 +66,13 @@ export default function Academics() {
             </ul>
           </div>
           <Reveal delay={0.1}>
-            <ImagePlaceholder label={t("academics.classroom")} ratio="4/3" />
+            <div className="aspect-[4/3] overflow-hidden rounded-2xl shadow-soft">
+              <img
+                src="https://res.cloudinary.com/dwta5v9wi/image/upload/v1785327269/WhatsApp_Image_2026-07-27_at_11.59.03_PM_lz68ee.jpg"
+                alt={t("academics.classroom")}
+                className="h-full w-full object-cover"
+              />
+            </div>
           </Reveal>
         </div>
       </Section>

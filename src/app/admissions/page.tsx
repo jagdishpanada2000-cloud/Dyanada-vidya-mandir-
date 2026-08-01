@@ -24,13 +24,6 @@ export default function Admissions() {
     t("admissions.doc6"),
   ];
 
-  const dates = [
-    { label: t("admissions.date1.label"), value: "15 January 2026" },
-    { label: t("admissions.date2.label"), value: "28 February 2026" },
-    { label: t("admissions.date3.label"), value: "10 – 20 March 2026" },
-    { label: t("admissions.date4.label"), value: "15 June 2026" },
-  ];
-
   return (
     <>
       <PageHero
@@ -58,36 +51,17 @@ export default function Admissions() {
       </div>
 
       <Section alt>
-        <div className="grid gap-14 lg:grid-cols-2">
-          <div>
-            <SectionHeading eyebrow={t("admissions.dates.eyebrow")} title={t("admissions.dates.title")} />
-            <div className="mt-10">
-              {dates.map((d, i) => (
-                <Reveal key={d.label} delay={i * 0.06}>
-                  <div className="flex items-baseline justify-between gap-6 border-t border-border py-5">
-                    <span className="text-sm text-muted-foreground">{d.label}</span>
-                    <span className="font-display text-lg font-semibold text-primary">
-                      {d.value}
-                    </span>
-                  </div>
-                </Reveal>
-              ))}
-            </div>
-          </div>
-          <div>
-            <SectionHeading eyebrow={t("admissions.checklist.eyebrow")} title={t("admissions.checklist.title")} />
-            <ul className="mt-10 space-y-4">
-              {documents.map((d, i) => (
-                <Reveal key={d} delay={i * 0.05}>
-                  <li className="flex gap-4 border-t border-border pt-4 text-sm leading-relaxed text-muted-foreground">
-                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
-                    {d}
-                  </li>
-                </Reveal>
-              ))}
-            </ul>
-          </div>
-        </div>
+        <SectionHeading eyebrow={t("admissions.checklist.eyebrow")} title={t("admissions.checklist.title")} />
+        <ul className="mt-10 space-y-4">
+          {documents.map((d, i) => (
+            <Reveal key={d} delay={i * 0.05}>
+              <li className="flex gap-4 border-t border-border pt-4 text-sm leading-relaxed text-muted-foreground">
+                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
+                {d}
+              </li>
+            </Reveal>
+          ))}
+        </ul>
       </Section>
       <div className="flex justify-center py-8">
         <img src="https://res.cloudinary.com/dwta5v9wi/image/upload/v1785330324/copy_of_section_end_uqkgou.png" alt="" className="h-5 opacity-40 sm:h-10" />

@@ -10,7 +10,6 @@ const navKey: Record<string, string> = {
   "/about": "nav.about",
   "/academics": "nav.academics",
   "/facilities": "nav.facilities",
-  "/highlights": "nav.highlights",
   "/gallery": "nav.gallery",
   "/alumni": "nav.alumni",
   "/contact": "nav.contact",
