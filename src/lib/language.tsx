@@ -292,7 +292,7 @@ const translations: Translations = {
   "alumni.v7.role": { en: "Business in the Mechanical Field", mr: "मेकॅनिकल क्षेत्रात व्यवसाय" },
   "alumni.v7.quote": { en: "There is no deity other than the Guru! He shows the way in our dark lives!! Dnyanada Vidya Mandir is a temple of knowledge that has blessed many children like me. We were fortunate to have all-round teachers at school. A school like this is not easy to find, which is why I will always remain indebted to it.", mr: "गुरू विना दैवत नाही अन्य कोणी ! मार्ग दाखवी आम्हा अंधाऱ्या जीवनी !! ज्ञानदा विद्या मंदिर हे माझ्या सारख्या अनेक मुलांना लाभलेले ज्ञान देणारे मंदिर आहे. शाळेत आम्हाला सर्वगुणसंपन्न शिक्षक लाभले हे आमचे भाग्य. अशी शाळा मिळने नाही म्हणुन मी शाळेचा नेहमी ऋणी रहीन." },
   "alumni.reunion": { en: "Student Reunion", mr: "विद्यार्थी पुनर्मिलन" },
-  "alumni.email": { en: "dnyanadavidyamandir1975@gmail.com", mr: "dnyanadavidyamandir1975@gmail.com" },
+  "alumni.email": { en: "enquiry@dvmedu.co.in", mr: "enquiry@dvmedu.co.in" },
   "alumni.hero.title": {
     en: "Once a Dnyanadan, always a Dnyanadan",
     mr: "एकदा ज्ञानदाचे, तर नेहमी ज्ञानदाचे",

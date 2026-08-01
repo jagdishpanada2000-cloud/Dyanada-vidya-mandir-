@@ -99,7 +99,7 @@ export default function RootLayout({
               description:
                 "Dnyanada Vidya Mandir, Ulhasnagar-4 — knowledge, values and quality education since 1975.",
               telephone: "+91 92726 98531",
-              email: "dnyanadavidyamandir1975@gmail.com",
+              email: "enquiry@dvmedu.co.in",
               address: {
                 "@type": "PostalAddress",
                 streetAddress: "मनेरेगाव रोड, सेक्शन २५, कृष्ण मार्बल जवळ",

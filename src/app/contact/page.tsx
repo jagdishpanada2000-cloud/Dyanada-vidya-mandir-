@@ -16,13 +16,13 @@ export default function Contact() {
     const subject = String(data.get("subject") || "");
     const message = String(data.get("message") || "");
     const body = `${message}\n\n— ${name}\n${email}`;
-    window.location.href = `mailto:dnyanadavidyamandir1975@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = `mailto:enquiry@dvmedu.co.in?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
 
   const details = [
     { icon: MapPin, label: t("contact.detail1.label"), value: "मानेरेगाव रोड, सेक्शन २५, रामरक्षा हॉस्पिटल जवळ, उल्हासनगर, जिल्हा ठाणे, पिन कोड - ४२१००४" },
     { icon: Phone, label: t("contact.detail2.label"), value: "+91 92726 98531" },
-    { icon: Mail, label: t("contact.detail3.label"), value: "dnyanadavidyamandir1975@gmail.com" },
+    { icon: Mail, label: t("contact.detail3.label"), value: "enquiry@dvmedu.co.in" },
     { icon: Clock, label: t("contact.detail4.label"), value: t("contact.hours") },
   ];
 
