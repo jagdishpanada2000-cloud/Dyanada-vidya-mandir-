@@ -2,19 +2,31 @@
 
 import { Palette, Dumbbell, Trees } from "lucide-react";
 import { useLanguage } from "@/lib/language";
-import { PageHero, Reveal, Section, SectionHeading } from "@/components/Section";
-import { ImagePlaceholder } from "@/components/ImagePlaceholder";
+import { PageHero, Reveal, Section } from "@/components/Section";
 
 export default function Facilities() {
   const { t } = useLanguage();
 
   const facilities = [
-    { icon: Palette, title: t("facilities.f1.title"), text: t("facilities.f1.text") },
-    { icon: Dumbbell, title: t("facilities.f2.title"), text: t("facilities.f2.text") },
-    { icon: Trees, title: t("facilities.f3.title"), text: t("facilities.f3.text") },
+    {
+      icon: Palette,
+      title: t("facilities.f1.title"),
+      text: t("facilities.f1.text"),
+      img: "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785556355/7_gbycss.png",
+    },
+    {
+      icon: Dumbbell,
+      title: t("facilities.f2.title"),
+      text: t("facilities.f2.text"),
+      img: "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785327274/WhatsApp_Image_2026-07-27_at_11.59.09_PM_2_yhimdw.jpg",
+    },
+    {
+      icon: Trees,
+      title: t("facilities.f3.title"),
+      text: t("facilities.f3.text"),
+      img: "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785555880/copy_of_6_v0ma2r.png",
+    },
   ];
-
-  const buildingLabels = [t("facilities.building1"), t("facilities.building2"), t("facilities.building3")];
 
   return (
     <>
@@ -29,32 +41,19 @@ export default function Facilities() {
           {facilities.map((f, i) => (
             <Reveal key={f.title} delay={i * 0.06}>
               <article className="card-elegant h-full overflow-hidden">
-                <ImagePlaceholder label={f.title} ratio="16/10" className="rounded-none border-0 border-b" />
+                <div className="aspect-[16/10] overflow-hidden">
+                  <img
+                    src={f.img}
+                    alt={f.title}
+                    className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+                  />
+                </div>
                 <div className="p-7">
                   <f.icon className="h-5 w-5 text-gold" strokeWidth={1.4} />
                   <h3 className="mt-4 font-display text-xl font-semibold">{f.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{f.text}</p>
                 </div>
               </article>
-            </Reveal>
-          ))}
-        </div>
-      </Section>
-      <div className="flex justify-center py-8">
-        <img src="https://res.cloudinary.com/dwta5v9wi/image/upload/v1785330324/copy_of_section_end_uqkgou.png" alt="" className="h-5 opacity-40 sm:h-10" />
-      </div>
-
-      <Section alt>
-        <SectionHeading
-          eyebrow={t("facilities.campus.eyebrow")}
-          title={t("facilities.campus.title")}
-          intro={t("facilities.campus.intro")}
-          center
-        />
-        <div className="mt-14 grid gap-5 sm:grid-cols-3">
-          {buildingLabels.map((l, i) => (
-            <Reveal key={l} delay={i * 0.08}>
-              <ImagePlaceholder label={l} ratio="3/4" />
             </Reveal>
           ))}
         </div>
