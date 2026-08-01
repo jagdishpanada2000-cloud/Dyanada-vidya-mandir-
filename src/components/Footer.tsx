@@ -53,7 +53,7 @@ export function Footer() {
             <li className="flex gap-3">
               <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold" strokeWidth={1.6} />
               <span>
-                मनेरेगाव रोड, सेक्शन २५, कृष्ण मार्बल जवळ, उल्हासनगर, जिल्हा ठाणे, पिन कोड - ४२१००४
+                मानेरेगाव रोड, सेक्शन २५, रामरक्षा हॉस्पिटल जवळ, उल्हासनगर, जिल्हा ठाणे, पिन कोड - ४२१००४
               </span>
             </li>
             <li className="flex gap-3">

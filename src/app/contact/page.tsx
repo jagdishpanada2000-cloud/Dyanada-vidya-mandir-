@@ -20,7 +20,7 @@ export default function Contact() {
   };
 
   const details = [
-    { icon: MapPin, label: t("contact.detail1.label"), value: "मनेरेगाव रोड, सेक्शन २५, कृष्ण मार्बल जवळ, उल्हासनगर, जिल्हा ठाणे, पिन कोड - ४२१००४" },
+    { icon: MapPin, label: t("contact.detail1.label"), value: "मानेरेगाव रोड, सेक्शन २५, रामरक्षा हॉस्पिटल जवळ, उल्हासनगर, जिल्हा ठाणे, पिन कोड - ४२१००४" },
     { icon: Phone, label: t("contact.detail2.label"), value: "+91 92726 98531" },
     { icon: Mail, label: t("contact.detail3.label"), value: "dnyanadavidyamandir1975@gmail.com" },
     { icon: Clock, label: t("contact.detail4.label"), value: t("contact.hours") },
