@@ -36,7 +36,6 @@ const otherImages = [
 ];
 
 const campusImages = [
-  "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785327267/WhatsApp_Image_2026-07-27_at_11.59.00_PM_xzb6ib.jpg",
   "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785327267/WhatsApp_Image_2026-07-27_at_11.59.01_PM_evg5qz.jpg",
   "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785327272/WhatsApp_Image_2026-07-27_at_11.59.06_PM_kdrhxc.jpg",
   "https://res.cloudinary.com/dwta5v9wi/image/upload/v1785327257/WhatsApp_Image_2026-07-27_at_11.58.50_PM_1_gmcg77.jpg",
