@@ -39,9 +39,8 @@ export default function Alumni() {
                   <Image src={v.img} alt={t(v.nameKey)} width={56} height={56} className="h-14 w-14 shrink-0 rounded-full object-cover" />
                   <div className="min-w-0">
                     <p className="truncate font-medium text-primary">{t(v.nameKey)}</p>
-                    <p className="truncate text-xs text-muted-foreground">
-                      {t(v.batchKey)} &middot; {t(v.roleKey)}
-                    </p>
+                    <p className="truncate text-xs text-muted-foreground">{t(v.batchKey)}</p>
+                    <p className="truncate text-xs text-muted-foreground">{t(v.roleKey)}</p>
                   </div>
                 </div>
               </article>

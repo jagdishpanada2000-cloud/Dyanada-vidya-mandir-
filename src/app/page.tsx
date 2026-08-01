@@ -7,7 +7,7 @@ import { ArrowRight, BookOpen, Heart, Scale, Shield, Handshake, Users, Lightbulb
 import { useLanguage } from "@/lib/language";
 import { Reveal, Section } from "@/components/Section";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
-import { toMarathiNum } from "@/lib/utils";
+import { cn, toMarathiNum } from "@/lib/utils";
 
 const coreValueData = [
   { mr: "ज्ञान", en: "Knowledge", icon: BookOpen },
@@ -108,7 +108,7 @@ export default function Home() {
       <section className="border-b border-border bg-beige">
         <div className="mx-auto grid max-w-7xl grid-cols-2 gap-y-10 px-5 py-14 sm:grid-cols-3 lg:grid-cols-3 lg:px-8">
           {stats.map((s, i) => (
-            <Reveal key={s.label} delay={i * 0.07} className="text-center">
+            <Reveal key={s.label} delay={i * 0.07} className={cn("text-center", i === 2 && "max-sm:col-span-2")}>
               <div className="font-display text-4xl font-semibold text-primary sm:text-5xl">
                 {language === "mr" ? toMarathiNum(s.value) : s.value}
               </div>
